@@ -1,0 +1,812 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fff8f0, #f3e8ff);
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 18px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 4px 20px rgba(80, 50, 100, 0.15);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* ===== TRI CIRCLE LOGO - CODE ONLY ===== */
+
+/* ===== TRI CIRCLE LOGO - CODE ONLY - FINAL BIG ===== */
+
+.tri-logo-img {
+    width: 117px;
+    height: 117px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.tri-main {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: bold;
+    color: #5a0f1f;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.tri-r {
+    position: relative;
+    display: inline-block;
+}
+
+.tri-r::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 2px;
+    width: 40px;
+    height: 15px;
+    border-bottom: 2.2px solid #c9a25a;
+    border-right: 2.2px solid #c9a25a;
+    border-radius: 0 0 100% 0;
+    transform: rotate(-10deg);
+}
+
+.tri-sub1 {
+    font-size: 5.8px;
+    letter-spacing: 0.7px;
+    font-weight: 700;
+    color: #111;
+    margin-top: 3px;
+    white-space: nowrap;
+}
+
+.tri-divider {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin: 3px 0;
+    width: 86%;
+}
+
+.tri-divider .line {
+    flex: 1;
+    height: 0.7px;
+    background: #c9a25a;
+}
+
+.tri-divider .diamond {
+    width: 5.5px;
+    height: 5.5px;
+    background: #c9a25a;
+    transform: rotate(45deg);
+}
+
+.tri-sub2 {
+    font-size: 5px;
+    letter-spacing: 0.5px;
+    color: #111;
+    white-space: nowrap;
+}
+/* Navigation */
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar > li > a {
+    display: block;
+
+    padding: 12px 20px;
+
+    color: #5d456b;
+    background: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(80, 50, 100, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+
+.navbar > li > a:hover {
+    background: #8e5aa7;
+    color: white;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(126, 77, 150, 0.30);
+}
+
+/* Active tab */
+
+.navbar > li > a.active {
+    background: #8e5aa7;
+    color: white;
+
+    box-shadow: 0 7px 18px rgba(126, 77, 150, 0.35);
+}
+
+/* Dropdown */
+
+.submenu {
+    display: none;
+
+    position: absolute;
+
+    top: 55px;
+    left: 0;
+
+    min-width: 180px;
+
+    list-style: none;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 8px;
+
+    box-shadow: 0 8px 25px rgba(60, 40, 80, 0.20);
+
+    animation: dropdown 0.25s ease;
+}
+
+.submenu.show {
+    display: block;
+}
+
+.submenu li a {
+    display: block;
+
+    padding: 11px 15px;
+
+    color: #5d456b;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: all 0.2s ease;
+}
+
+.submenu li a:hover {
+    background: #f0e1f7;
+    color: #7b4b94;
+
+    padding-left: 20px;
+}
+
+/* Dropdown animation */
+
+@keyframes dropdown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main content */
+
+main {
+    padding: 60px 30px;
+}
+
+/* Content card */
+
+.content-section {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 35px rgba(80, 50, 100, 0.15);
+
+    animation: sectionShow 0.4s ease;
+}
+
+.content-section h2 {
+    color: #7b4b94;
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.content-section p {
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+/* Hide sections */
+
+.hidden {
+    display: none;
+}
+
+/* Section animation */
+
+@keyframes sectionShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Buttons */
+
+button,
+.contact-button {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 13px 25px;
+
+    background: #8e5aa7;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(126, 77, 150, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.contact-button:hover {
+    background: #704080;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(126, 77, 150, 0.35);
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .content-section {
+        padding: 30px 20px;
+    }
+}
+
+/* ================= ABHIVYAKTI ================= */
+
+.abhivyakti-title {
+    text-align: center;
+    color: #7b4b94;
+    margin-bottom: 25px;
+}
+
+.abhivyakti-image {
+    width: 100%;
+    text-align: center;
+}
+
+.abhivyakti-image img {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.brochure-btn {
+    display: block;
+    width: fit-content;
+    margin: 25px auto;
+    padding: 12px 25px;
+
+    background: #7b4b94;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 15px rgba(80, 50, 100, 0.25);
+
+    transition: 0.3s;
+}
+
+.brochure-btn:hover {
+    background: #633778;
+    transform: translateY(-2px);
+}
+.divyaam-small-logo{
+    width: 110px;  /* yahan se size control hoga */
+    height: auto;
+    display: block;
+    margin: 0 auto 12px auto;
+}
+.gabha-small-logo{
+    width: 160px;
+    height: auto;
+    display: block;
+    margin-left: 0;
+    margin-bottom: 12px;
+}
+#diviyan {
+    text-align: center;
+}
+
+#diviyan img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+#gabha {
+    text-align: center;
+}
+
+#gabha img {
+    display: block;
+    margin: 0 auto 20px;
+}
+#about,
+#abhivyakti,
+#paynow,
+#whatsapp,
+#email,
+#instagram,
+#facebook {
+    text-align: center;
+}
+/* ================= LANGUAGE BUTTON ================= */
+
+.language-btn {
+    display: inline-block;
+
+    margin-left: 15px;
+
+    padding: 10px 18px;
+
+    background: #8e5aa7;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(126, 77, 150, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.language-btn:hover {
+    background: #704080;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(126, 77, 150, 0.35);
+}
+.language-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.event-details {
+    text-align: center;
+}
+/* ================= BOOK NOW EVENT ================= */
+
+.event-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.event-poster img {
+    width: 280px;
+    height: auto;
+    display: block;
+}
+
+.event-details {
+    text-align: left;
+    max-width: 400px;
+}
+
+.event-details h2 {
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    margin: 10px 0;
+}
+
+.event-tagline {
+    color: #7b4b94;
+    font-weight: bold;
+}
+
+.ticket-price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .event-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .event-details {
+        text-align: center;
+    }
+}
+/* SIDE SOCIAL MEDIA BAR */
+
+/* ================================
+   SOCIAL BAR
+================================ */
+
+.social-bar {
+    position: fixed;
+    right: 15px;
+    bottom: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    z-index: 9999;
+}
+
+
+/* ================================
+   SOCIAL ICON BOX
+================================ */
+
+.social-bar a:not(.ai-agent-button) {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+    color: #6f4b8b;
+
+    border: 1px solid #e5d9ed;
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+/* ================================
+   ICON SIZE
+================================ */
+
+.social-bar a:not(.ai-agent-button) svg {
+    width: 24px;
+    height: 24px;
+
+    fill: none;
+    stroke: #6f4b8b;
+    stroke-width: 1.5;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* Facebook */
+
+.social-bar a.facebook-icon svg path {
+    fill: #6f4b8b;
+    stroke: none;
+}
+
+
+/* YouTube */
+
+.social-bar a.youtube-icon svg polygon {
+    fill: #6f4b8b;
+    stroke: none;
+}
+
+
+/* WhatsApp */
+
+.social-bar a.whatsapp-icon {
+    width: 58px;
+    height: 58px;
+
+    background: #ffffff;
+    border: 1px solid #e5d9ed;
+}
+
+.social-bar a.whatsapp-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.social-bar a.whatsapp-icon svg path {
+    stroke: #6f4b8b;
+}
+
+.social-bar a.whatsapp-icon svg path:last-child {
+    fill: #6f4b8b;
+    stroke: none;
+}
+
+
+/* ================================
+   SOCIAL HOVER
+================================ */
+
+.social-bar a:not(.ai-agent-button):hover {
+    background: #f5eef9;
+    transform: translateX(-3px);
+}
+
+
+/* ================================
+   TRI ASSISTANT
+================================ */
+
+.social-bar a.ai-agent-button {
+    width: 150px;
+    height: 52px;
+
+    margin-top: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #4b315b;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    box-shadow: 0 5px 15px rgba(60, 40, 80, 0.25);
+
+    transition: 0.3s;
+}
+
+
+/* TRI Assistant Hover */
+
+.social-bar a.ai-agent-button:hover {
+    background: #36223f;
+    transform: translateY(-2px);
+}
+/* ================================
+   TRI ASSISTANT CHAT
+================================ */
+
+.ai-chat-box {
+    display: none;
+
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+
+    width: 330px;
+    height: 450px;
+
+    background: #ffffff;
+    border: 1px solid #e5d9ed;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(60, 40, 80, 0.25);
+
+    z-index: 10000;
+
+    overflow: hidden;
+}
+
+
+/* Header */
+
+.ai-chat-header {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: #4b315b;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ai-chat-header button {
+    background: none;
+    border: none;
+    color: white;
+
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* Messages */
+
+.ai-chat-messages {
+    height: 330px;
+
+    padding: 15px;
+
+    overflow-y: auto;
+
+    background: #faf7fc;
+}
+
+.ai-message,
+.user-message {
+    max-width: 80%;
+
+    padding: 9px 12px;
+
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.ai-message {
+    background: #eee5f4;
+    color: #3d2948;
+}
+
+.user-message {
+    margin-left: auto;
+
+    background: #4b315b;
+    color: white;
+}
+
+
+/* Input */
+
+.ai-chat-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 12px;
+    height: 62px;
+    box-sizing: border-box;
+
+    border-top: 1px solid #e5d9ed;
+    background: white;
+}
+
+.ai-chat-input input {
+    flex: 1;
+    height: 40px;
+    box-sizing: border-box;
+
+    padding: 0 12px;
+
+    border: 1px solid #d8c8e2;
+    border-radius: 8px;
+
+    outline: none;
+}
+
+.ai-chat-input button {
+    width: 65px;
+    height: 40px;
+
+    padding: 0;
+
+    margin: 0;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #4b315b;
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

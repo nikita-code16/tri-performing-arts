@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRI - Email</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="tri-circle-logo">
+        <div class="tri-main">T<span class="tri-r">R</span>I</div>
+
+        <div class="tri-sub1" data-en="SCHOOL OF PERFORMING ARTS" data-mr="परफॉर्मिंग आर्ट्स स्कूल">
+            SCHOOL OF PERFORMING ARTS
+        </div>
+
+        <div class="tri-divider">
+            <span class="line"></span>
+            <span class="diamond"></span>
+            <span class="line"></span>
+        </div>
+
+        <div class="tri-sub2" data-en="MUSIC • DANCE • THEATRE" data-mr="संगीत • नृत्य • नाट्य">
+            MUSIC &nbsp;•&nbsp; DANCE &nbsp;•&nbsp; THEATRE
+        </div>
+    </div>
+
+    <nav>
+        <ul class="navbar">
+
+            <li><a href="about.html" data-en="About" data-mr="आमच्याबद्दल">About</a></li>
+            <li><a href="diviyan.html" data-en="Diviyan" data-mr="दिवियन">Diviyan</a></li>
+            <li><a href="abhivyakti.html" data-en="Abhivyakti" data-mr="अभिव्यक्ती">Abhivyakti</a></li>
+            <li><a href="gabha.html" data-en="Gabha" data-mr="गाभा">Gabha</a></li>
+
+            <li class="dropdown">
+                <a href="#" onclick="toggleDropdown('bookingMenu'); return false;"
+                   data-en="Booking ▾" data-mr="बुकिंग ▾">Booking ▾</a>
+
+                <ul id="bookingMenu" class="submenu">
+                    <li><a href="booknow.html" data-en="Book Now" data-mr="आता बुक करा">Book Now</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="active"
+                   onclick="toggleDropdown('contactMenu'); return false;"
+                   data-en="Contact ▾" data-mr="संपर्क ▾">Contact ▾</a>
+
+                <ul id="contactMenu" class="submenu">
+                    <li><a href="whatsapp.html" data-en="WhatsApp" data-mr="व्हॉट्सॲप">WhatsApp</a></li>
+                    <li><a href="email.html" data-en="Email" data-mr="ईमेल">Email</a></li>
+                    <li><a href="instagram.html" data-en="Instagram" data-mr="इन्स्टाग्राम">Instagram</a></li>
+                    <li><a href="facebook.html" data-en="Facebook" data-mr="फेसबुक">Facebook</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+    <div class="language-container">
+        <button id="languageBtn" onclick="toggleLanguage()">मराठी</button>
+    </div>
+
+    <section id="email" class="content-section">
+
+        <h2 data-en="Email" data-mr="ईमेल">
+            Email
+        </h2>
+
+        <p data-en="Send us an email for any questions or information."
+           data-mr="कोणत्याही प्रश्नासाठी किंवा माहितीसाठी आम्हाला ईमेल पाठवा.">
+            Send us an email for any questions or information.
+        </p>
+
+        <a href="mailto:example@gmail.com"
+           class="contact-button"
+           data-en="Send Email"
+           data-mr="ईमेल पाठवा">
+            Send Email
+        </a>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+<script type="module" src="firebase.js"></script>
+
+</body>
+</html>
