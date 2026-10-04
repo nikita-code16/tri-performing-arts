@@ -45,7 +45,7 @@
             <li>
                 <a href="diviyan.html"
                    data-en="Diviyan" data-mr="दिवियन">
-                    Diviyan
+                    Diviyam
                 </a>
             </li>
 
@@ -208,6 +208,32 @@
 
 <script src="script.js"></script>
 <script type="module" src="firebase.js"></script>
+<script type="module" src="ai.js"></script>
+<div id="aiChatBox" class="ai-chat-box">
+    
+
+    <div class="ai-chat-header">
+        <span>TRI Assistant</span>
+        <button onclick="closeAIChat()">×</button>
+    </div>
+
+    <div id="aiChatMessages" class="ai-chat-messages">
+        <div class="ai-message">
+            Hi! I'm TRI Assistant. How can I help you?
+        </div>
+    </div>
+
+    <div class="ai-chat-input">
+        <input
+            type="text"
+            id="aiUserInput"
+            placeholder="Type your message..."
+        >
+
+        <button onclick="sendAIMessage()">Send</button>
+    </div>
+
+</div>
 
 </body>
 </html>

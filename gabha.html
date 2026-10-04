@@ -37,7 +37,7 @@
 
             <li><a href="about.html" data-en="About" data-mr="आमच्याबद्दल">About</a></li>
 
-            <li><a href="diviyan.html" data-en="Diviyan" data-mr="दिवियन">Diviyan</a></li>
+            <li><a href="diviyan.html" data-en="Diviyan" data-mr="दिवियन">Diviyam</a></li>
 
             <li><a href="abhivyakti.html" data-en="Abhivyakti" data-mr="अभिव्यक्ती">Abhivyakti</a></li>
 
@@ -149,6 +149,32 @@
 
 <script src="script.js"></script>
 <script type="module" src="firebase.js"></script>
+<script type="module" src="ai.js"></script>
+
+<div id="aiChatBox" class="ai-chat-box">
+
+    <div class="ai-chat-header">
+        <span>TRI Assistant</span>
+        <button onclick="closeAIChat()">×</button>
+    </div>
+
+    <div id="aiChatMessages" class="ai-chat-messages">
+        <div class="ai-message">
+            Hi! I'm TRI Assistant. How can I help you?
+        </div>
+    </div>
+
+    <div class="ai-chat-input">
+        <input
+            type="text"
+            id="aiUserInput"
+            placeholder="Type your message..."
+        >
+
+        <button onclick="sendAIMessage()">Send</button>
+    </div>
+
+</div>
 
 </body>
 </html>

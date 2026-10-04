@@ -388,7 +388,7 @@ button:hover,
     transform: translateY(-2px);
 }
 .divyaam-small-logo{
-    width: 110px;  /* yahan se size control hoga */
+    width: 190px;  /* yahan se size control hoga */
     height: auto;
     display: block;
     margin: 0 auto 12px auto;
@@ -404,19 +404,27 @@ button:hover,
     text-align: center;
 }
 
-#diviyan img {
-    display: block;
-    margin: 0 auto 20px;
+.diviyan-main-logo {
+    width: 210px;
+    height: 210px;
+    object-fit: contain;
+    margin-top: -25px;
+    margin-bottom: 10px;
+    background: white;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 
 #gabha {
-    text-align: center;
+    text-align: flex-start;
 }
 
 #gabha img {
     display: block;
     margin: 0 auto 20px;
 }
+
 #about,
 #abhivyakti,
 #paynow,
@@ -809,4 +817,302 @@ button:hover,
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/* ================================
+   ABHIVYAKTI PROFESSIONAL SECTIONS
+================================ */
+
+#abhivyakti,
+#abhivyakti + .content-section,
+#abhivyakti + .content-section + .content-section,
+#abhivyakti + .content-section + .content-section + .content-section,
+#abhivyakti + .content-section + .content-section + .content-section + .content-section {
+    max-width: 900px;
+    min-height: 280px;
+    margin: 35px auto;
+    padding: 40px 50px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 20px rgba(75, 49, 91, 0.10);
+
+    border: 1px solid #eee5f4;
+}
+
+#abhivyakti h2,
+.content-section h2 {
+    text-align: center;
+    color: #4b315b;
+    margin-bottom: 30px;
+}
+
+.content-section h3 {
+    color: #5b3d72;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.content-section p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.content-section + .content-section {
+    margin-top: 35px;
+}
+
+
+/* Brochure section */
+
+.brochure-section {
+    text-align: center;
+    min-height: 220px !important;
+}
+
+.brochure-section p {
+    max-width: 700px;
+    margin: 10px auto 25px;
+    line-height: 1.7;
+}
+
+.brochure-btn {
+    display: inline-block;
+    padding: 12px 25px;
+
+    background: #4b315b;
+    color: white;
+
+    border-radius: 8px;
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.brochure-btn:hover {
+    background: #36223f;
+    transform: translateY(-2px);
+}
+.abhivyakti-logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.abhivyakti-logo img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+/* =================================
+   DIVIYAN PAGE
+================================= */
+
+.diviyan-box {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 40px 50px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e5d9ed;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 22px rgba(75, 49, 91, 0.10);
+}
+
+.diviyan-intro {
+    min-height: 420px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.diviyan-main-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.diviyan-intro h2 {
+    color: #4b315b;
+    font-size: 30px;
+    margin: 0 0 10px;
+}
+
+.diviyan-tagline {
+    color: #76558b;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.diviyan-section-title {
+    background: #4b315b;
+    color: white;
+
+    text-align: center;
+
+    padding: 13px;
+    margin: -40px -50px 30px;
+
+    border-radius: 17px 17px 0 0;
+
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.diviyan-box h3 {
+    color: #5b3d72;
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+
+.diviyan-box p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.diviyan-welcome {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.diviyan-card-grid,
+.diviyan-philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.diviyan-card {
+    background: #f7f2fa;
+    border: 1px solid #e5d9ed;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.diviyan-card h3 {
+    margin-top: 0;
+}
+
+.diviyan-card p {
+    margin-bottom: 0;
+}
+
+.diviyan-journey {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.diviyan-journey div {
+    padding: 18px 20px;
+
+    background: #f7f2fa;
+
+    border-left: 5px solid #76558b;
+    border-radius: 10px;
+}
+
+.diviyan-journey span {
+    color: #4b315b;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.diviyan-journey p {
+    margin: 5px 0 0;
+}
+
+.guru-info {
+    background: #f7f2fa;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.guru-info h2 {
+    color: #4b315b;
+    margin-top: 0;
+}
+
+.guru-info ul {
+    color: #555;
+    line-height: 1.8;
+}
+
+.guru-quote {
+    margin-top: 20px;
+    padding: 18px;
+
+    background: #eee5f4;
+    border-left: 4px solid #4b315b;
+
+    color: #4b315b;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.diviyan-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.diviyan-faq div {
+    background: #f7f2fa;
+    padding: 18px 20px;
+    border-radius: 10px;
+    border: 1px solid #e5d9ed;
+}
+
+.diviyan-faq h3 {
+    margin-top: 0;
+}
+
+.diviyan-faq p {
+    margin-bottom: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .diviyan-box {
+        margin: 25px 15px;
+        padding: 30px 25px;
+    }
+
+    .diviyan-section-title {
+        margin: -30px -25px 25px;
+    }
+
+    .diviyan-card-grid,
+    .diviyan-philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.diviyan-main-logo {
+    width: 260px !important;
+    height: 260px !important;
+    object-fit: contain;
+    display: block;
+    margin: -15px auto 10px auto !important;
+    background: white;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
