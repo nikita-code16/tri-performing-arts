@@ -1,71 +1,32 @@
-function toggleDropdown(menuId) {
+/* ================= DROPDOWN ================= */
+
+window.toggleDropdown = function (menuId) {
 
     const menu = document.getElementById(menuId);
 
-    document.querySelectorAll(".submenu").forEach(function(otherMenu) {
+    if (!menu) {
+        return;
+    }
 
-        if (otherMenu !== menu) {
-            otherMenu.classList.remove("show");
+    document.querySelectorAll(".submenu.show").forEach(function (item) {
+
+        if (item !== menu) {
+            item.classList.remove("show");
         }
 
     });
 
     menu.classList.toggle("show");
-}
-
-
-/* Payment */
-
-function makePayment() {
-
-    alert("Payment page will open here.");
-
-}
-
-
-/* ================= LANGUAGE ================= */
-
-let currentLanguage = "en";
-
-function toggleLanguage() {
-
-    if (currentLanguage === "en") {
-        currentLanguage = "mr";
-    } else {
-        currentLanguage = "en";
-    }
-
-    document.querySelectorAll("[data-en]").forEach(function(element) {
-
-        element.textContent = element.getAttribute(
-            "data-" + currentLanguage
-        );
-
-    });
-
-    const languageBtn = document.getElementById("languageBtn");
-
-    if (currentLanguage === "en") {
-
-        languageBtn.textContent = "मराठी";
-        document.documentElement.lang = "en";
-
-    } else {
-
-        languageBtn.textContent = "English";
-        document.documentElement.lang = "mr";
-
-    }
-}
+};
 
 
 /* Close dropdown when clicking outside */
 
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function (event) {
 
     if (!event.target.closest(".dropdown")) {
 
-        document.querySelectorAll(".submenu").forEach(function(menu) {
+        document.querySelectorAll(".submenu.show").forEach(function (menu) {
             menu.classList.remove("show");
         });
 
@@ -74,82 +35,81 @@ document.addEventListener("click", function(event) {
 });
 
 
-/* ================= TRI ASSISTANT ================= */
+/* ================= LANGUAGE ================= */
 
-function openAIChat() {
-
-    document.getElementById("aiChatBox").style.display = "block";
-
-}
+let currentLanguage =
+    localStorage.getItem("triLanguage") || "en";
 
 
-function closeAIChat() {
+function applyLanguage() {
 
-    document.getElementById("aiChatBox").style.display = "none";
+    document.querySelectorAll("[data-en][data-mr]").forEach(function (element) {
 
-}
+        const translatedText =
+            element.getAttribute("data-" + currentLanguage);
 
+        if (translatedText !== null) {
+            element.textContent = translatedText;
+        }
 
-async function sendAIMessage() {
-
-    const input = document.getElementById("aiUserInput");
-
-    const message = input.value.trim();
-
-    if (message === "") {
-        return;
-    }
-
-    const chatMessages = document.getElementById("aiChatMessages");
+    });
 
 
-    /* User message */
+    document.querySelectorAll(
+        "[data-placeholder-en][data-placeholder-mr]"
+    ).forEach(function (input) {
 
-    const userMessage = document.createElement("div");
+        const translatedPlaceholder =
+            input.getAttribute(
+                "data-placeholder-" + currentLanguage
+            );
 
-    userMessage.className = "user-message";
+        if (translatedPlaceholder !== null) {
+            input.placeholder = translatedPlaceholder;
+        }
 
-    userMessage.textContent = message;
-
-    chatMessages.appendChild(userMessage);
-
-
-    /* Clear input */
-
-    input.value = "";
-
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+    });
 
 
-    /* AI thinking message */
+    const languageBtn =
+        document.getElementById("languageBtn");
 
-    const aiMessage = document.createElement("div");
+    if (languageBtn) {
 
-    aiMessage.className = "ai-message";
+        if (currentLanguage === "en") {
 
-    aiMessage.textContent = "Thinking...";
+            languageBtn.textContent = "मराठी";
+            document.documentElement.lang = "en";
 
-    chatMessages.appendChild(aiMessage);
+        } else {
 
+            languageBtn.textContent = "English";
+            document.documentElement.lang = "mr";
 
-    try {
-
-        const { askTRIAssistant } = await import("./ai.js");
-
-        const answer = await askTRIAssistant(message);
-
-        aiMessage.textContent = answer;
-
-    } catch (error) {
-
-        console.error("AI Error:", error);
-
-        aiMessage.textContent =
-            "Sorry, I could not answer right now. Please try again.";
+        }
 
     }
 
-
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-
 }
+
+
+/* Language button */
+
+window.toggleLanguage = function () {
+
+    currentLanguage =
+        currentLanguage === "en" ? "mr" : "en";
+
+    localStorage.setItem(
+        "triLanguage",
+        currentLanguage
+    );
+
+    applyLanguage();
+
+};
+
+
+/* Apply saved language */
+
+applyLanguage();

@@ -17,7 +17,9 @@
             T<span class="tri-r">R</span>I
         </div>
 
-        <div class="tri-sub1" data-en="SCHOOL OF PERFORMING ARTS" data-mr="परफॉर्मिंग आर्ट्स स्कूल">
+        <div class="tri-sub1"
+             data-en="SCHOOL OF PERFORMING ARTS"
+             data-mr="परफॉर्मिंग आर्ट्स स्कूल">
             SCHOOL OF PERFORMING ARTS
         </div>
 
@@ -27,7 +29,9 @@
             <span class="line"></span>
         </div>
 
-        <div class="tri-sub2" data-en="MUSIC • DANCE • THEATRE" data-mr="संगीत • नृत्य • नाट्य">
+        <div class="tri-sub2"
+             data-en="MUSIC • DANCE • THEATRE"
+             data-mr="संगीत • नृत्य • नाट्य">
             MUSIC &nbsp;•&nbsp; DANCE &nbsp;•&nbsp; THEATRE
         </div>
     </div>
@@ -36,102 +40,85 @@
         <ul class="navbar">
 
             <li>
-                <a href="about.html" class="active"
-                   data-en="About" data-mr="आमच्याबद्दल">
+                <a href="about.html"
+                   class="active"
+                   data-en="About"
+                   data-mr="आमच्याबद्दल">
                     About
                 </a>
             </li>
 
             <li>
                 <a href="diviyan.html"
-                   data-en="Diviyan" data-mr="दिवियन">
+                   data-en="Diviyan"
+                   data-mr="दिवियन">
                     Diviyam
                 </a>
             </li>
 
             <li>
                 <a href="abhivyakti.html"
-                   data-en="Abhivyakti" data-mr="अभिव्यक्ती">
+                   data-en="Abhivyakti"
+                   data-mr="अभिव्यक्ती">
                     Abhivyakti
                 </a>
             </li>
 
             <li>
                 <a href="gabha.html"
-                   data-en="Gabha" data-mr="गाभा">
+                   data-en="Gabha"
+                   data-mr="गाभा">
                     Gabha
                 </a>
             </li>
 
-            <li class="dropdown">
+            <!-- BOOKING -->
+           <li class="dropdown">
 
-                <a href="#"
-                   onclick="toggleDropdown('bookingMenu'); return false;"
-                   data-en="Booking ▾" data-mr="बुकिंग ▾">
-                    Booking ▾
-                </a>
+    <a href="#"
+       onclick="
+       event.preventDefault();
+       const menu = document.getElementById('bookingMenu');
+       menu.style.display =
+       menu.style.display === 'block' ? 'none' : 'block';
+       "
+       data-en="Booking ▾"
+       data-mr="बुकिंग ▾">
+        Booking ▾
+    </a>
 
-                <ul id="bookingMenu" class="submenu">
+    <ul id="bookingMenu"
+        class="submenu">
 
-                    <li>
-                        <a href="booknow.html"
-                           data-en="Book Now" data-mr="आता बुक करा">
-                            Book Now
-                        </a>
-                    </li>
+        <li>
+            <a href="booknow.html"
+               data-en="Book Now"
+               data-mr="आता बुक करा">
+                Book Now
+            </a>
+        </li>
 
-                </ul>
+    </ul>
 
-            </li>
-
-            <li class="dropdown">
-
-                <a href="#"
-                   onclick="toggleDropdown('contactMenu'); return false;"
-                   data-en="Contact ▾" data-mr="संपर्क ▾">
-                    Contact ▾
-                </a>
-
-                <ul id="contactMenu" class="submenu">
-
-                    <li>
-                        <a href="whatsapp.html"
-                           data-en="WhatsApp" data-mr="व्हॉट्सॲप">
-                            WhatsApp
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="email.html"
-                           data-en="Email" data-mr="ईमेल">
-                            Email
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="instagram.html"
-                           data-en="Instagram" data-mr="इन्स्टाग्राम">
-                            Instagram
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="facebook.html"
-                           data-en="Facebook" data-mr="फेसबुक">
-                            Facebook
-                        </a>
-                    </li>
-
-                </ul>
-
-            </li>
-            <li>
-    <button id="languageBtn"
-            class="language-btn"
-            onclick="toggleLanguage()">
-        मराठी
-    </button>
 </li>
+
+            <!-- CONTACT -->
+            <li>
+                <a href="contact.html"
+                   data-en="Contact"
+                   data-mr="संपर्क">
+                    Contact
+                </a>
+            </li>
+
+            <!-- LANGUAGE -->
+            <li>
+                <button id="languageBtn"
+                        class="language-btn"
+                        onclick="toggleLanguage()">
+                    मराठी
+                </button>
+            </li>
 
         </ul>
     </nav>
@@ -139,8 +126,6 @@
 </header>
 
 <main>
-
-    
 
     <section id="about" class="content-section">
 
@@ -167,15 +152,20 @@
     </section>
 
 </main>
+
 <div class="social-bar">
 
-    <a href="https://www.facebook.com/" target="_blank" class="facebook-icon">
+    <a href="https://www.facebook.com/"
+       target="_blank"
+       class="facebook-icon">
         <svg viewBox="0 0 24 24">
             <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1z"/>
         </svg>
     </a>
 
-    <a href="https://www.instagram.com/tri_performing_arts/" target="_blank" class="instagram-icon">
+    <a href="https://www.instagram.com/tri_performing_arts/"
+       target="_blank"
+       class="instagram-icon">
         <svg viewBox="0 0 24 24">
             <rect x="3" y="3" width="18" height="18" rx="5"/>
             <circle cx="12" cy="12" r="4"/>
@@ -183,34 +173,45 @@
         </svg>
     </a>
 
-    <a href="https://www.youtube.com/" target="_blank" class="youtube-icon">
+    <a href="https://www.youtube.com/"
+       target="_blank"
+       class="youtube-icon">
         <svg viewBox="0 0 24 24">
             <rect x="2" y="5" width="20" height="14" rx="4"/>
             <polygon points="10,8 17,12 10,16"/>
         </svg>
     </a>
 
-    <a href="https://wa.me/919356769743" target="_blank" class="whatsapp-icon">
+    <a href="https://wa.me/919356769743"
+       target="_blank"
+       class="whatsapp-icon">
         <svg viewBox="0 0 32 32">
+
             <path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.8 6.4L3 29l6.8-1.8C11.7 28.4 13.8 29 16 29c7.2 0 13-5.8 13-13S23.2 3 16 3z"
-                  fill="none" stroke="white" stroke-width="2"/>
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"/>
+
             <path d="M11.5 9.8c-.4 0-.8.2-1 .6-.3.5-.8 1.6-.8 2.4 0 .4.2 1 .5 1.6.4.8 1 1.7 1.8 2.5 1.4 1.5 3.3 2.6 5.1 3.2.7.2 1.3.1 1.8-.2.5-.3 1.1-.9 1.3-1.4.2-.5.2-.8.1-1-.1-.2-.4-.3-.8-.5l-1.7-.8c-.3-.1-.6-.2-.8.2l-.7.9c-.2.3-.4.3-.7.2-.4-.2-1.5-.6-2.3-1.4-.9-.8-1.5-1.8-1.7-2.2-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.7-1.7c-.2-.5-.5-.7-.8-.7z"
                   fill="white"/>
+
         </svg>
     </a>
-    <a href="#" class="ai-agent-button"
-   onclick="openAIChat(); return false;"
-   title="TRI Assistant">
-    TRI Assistant
-</a>
+
+    <a href="#"
+       class="ai-agent-button"
+       onclick="openAIChat(); return false;"
+       title="TRI Assistant">
+        TRI Assistant
+    </a>
 
 </div>
 
 <script src="script.js"></script>
 <script type="module" src="firebase.js"></script>
 <script type="module" src="ai.js"></script>
+
 <div id="aiChatBox" class="ai-chat-box">
-    
 
     <div class="ai-chat-header">
         <span>TRI Assistant</span>
@@ -218,12 +219,15 @@
     </div>
 
     <div id="aiChatMessages" class="ai-chat-messages">
+
         <div class="ai-message">
             Hi! I'm TRI Assistant. How can I help you?
         </div>
+
     </div>
 
     <div class="ai-chat-input">
+
         <input
             type="text"
             id="aiUserInput"
@@ -231,6 +235,7 @@
         >
 
         <button onclick="sendAIMessage()">Send</button>
+
     </div>
 
 </div>
