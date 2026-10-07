@@ -6,6 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRI - Abhivyakti</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ================= ABHIVYAKTI GALLERY ================= */
+
+        .gallery-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px 50px;
+            box-sizing: border-box;
+
+            background: #ffffff;
+            border: 1px solid #e5d9ed;
+            border-radius: 18px;
+
+            box-shadow: 0 6px 22px rgba(75, 49, 91, 0.10);
+        }
+
+        .gallery-title {
+            text-align: center;
+            color: #4b315b;
+            font-size: 28px;
+            margin: 0 0 25px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 14px;
+            border: 1px solid #e5d9ed;
+            background: #faf7fc;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 230px;
+            display: block;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+        @media (max-width: 700px) {
+            .gallery-section {
+                padding: 30px 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -13,11 +77,14 @@
 <header>
 
     <div class="tri-circle-logo">
+
         <div class="tri-main">
             T<span class="tri-r">R</span>I
         </div>
 
-        <div class="tri-sub1" data-en="SCHOOL OF PERFORMING ARTS" data-mr="परफॉर्मिंग आर्ट्स स्कूल">
+        <div class="tri-sub1"
+             data-en="SCHOOL OF PERFORMING ARTS"
+             data-mr="परफॉर्मिंग आर्ट्स स्कूल">
             SCHOOL OF PERFORMING ARTS
         </div>
 
@@ -27,51 +94,79 @@
             <span class="line"></span>
         </div>
 
-        <div class="tri-sub2" data-en="MUSIC • DANCE • THEATRE" data-mr="संगीत • नृत्य • नाट्य">
+        <div class="tri-sub2"
+             data-en="MUSIC • DANCE • THEATRE"
+             data-mr="संगीत • नृत्य • नाट्य">
             MUSIC &nbsp;•&nbsp; DANCE &nbsp;•&nbsp; THEATRE
         </div>
+
     </div>
 
     <nav>
         <ul class="navbar">
 
-            <li><a href="about.html" data-en="About" data-mr="आमच्याबद्दल">About</a></li>
+            <li>
+                <a href="about.html"
+                   data-en="About"
+                   data-mr="आमच्याबद्दल">
+                    About
+                </a>
+            </li>
 
-            <li><a href="diviyan.html" data-en="Diviyan" data-mr="दिवियन">Diviyam</a></li>
+            <li>
+                <a href="diviyan.html"
+                   data-en="Divyaam"
+                   data-mr="दिव्याम">
+                    Divyaam
+                </a>
+            </li>
 
-            <li><a href="abhivyakti.html" class="active"
-                   data-en="Abhivyakti" data-mr="अभिव्यक्ती">Abhivyakti</a></li>
+            <li>
+                <a href="abhivyakti.html"
+                   class="active"
+                   data-en="Abhivyakti"
+                   data-mr="अभिव्यक्ती">
+                    Abhivyakti
+                </a>
+            </li>
 
-            <li><a href="gabha.html" data-en="Gabha" data-mr="गाभा">Gabha</a></li>
+            <li>
+                <a href="gabha.html"
+                   data-en="Gabha"
+                   data-mr="गाभा">
+                    Gabha
+                </a>
+            </li>
 
             <li class="dropdown">
-                <a href="#" onclick="toggleDropdown('bookingMenu'); return false;"
-                   data-en="Booking ▾" data-mr="बुकिंग ▾">
+
+                <a href="#"
+                   onclick="toggleDropdown('bookingMenu'); return false;"
+                   data-en="Booking ▾"
+                   data-mr="बुकिंग ▾">
                     Booking ▾
                 </a>
 
                 <ul id="bookingMenu" class="submenu">
+
                     <li>
                         <a href="booknow.html"
-                           data-en="Book Now" data-mr="आता बुक करा">
+                           data-en="Book Now"
+                           data-mr="आता बुक करा">
                             Book Now
                         </a>
                     </li>
+
                 </ul>
+
             </li>
 
-            <li class="dropdown">
-                <a href="#" onclick="toggleDropdown('contactMenu'); return false;"
-                   data-en="Contact ▾" data-mr="संपर्क ▾">
-                    Contact ▾
+            <li>
+                <a href="contact.html"
+                   data-en="Contact"
+                   data-mr="संपर्क">
+                    Contact
                 </a>
-
-                <ul id="contactMenu" class="submenu">
-                    <li><a href="whatsapp.html" data-en="WhatsApp" data-mr="व्हॉट्सॲप">WhatsApp</a></li>
-                    <li><a href="email.html" data-en="Email" data-mr="ईमेल">Email</a></li>
-                    <li><a href="instagram.html" data-en="Instagram" data-mr="इन्स्टाग्राम">Instagram</a></li>
-                    <li><a href="facebook.html" data-en="Facebook" data-mr="फेसबुक">Facebook</a></li>
-                </ul>
             </li>
 
             <li>
@@ -93,57 +188,80 @@
 
     <section id="abhivyakti" class="content-section">
 
-    <div class="abhivyakti-logo">
-        <img src="abhivyakti.png" alt="Abhivyakti Logo">
-    </div>
+        <div class="abhivyakti-logo">
+            <img src="abhivyakti.png"
+                 alt="Abhivyakti Logo">
+        </div>
 
-    <h2 data-en="Abhivyakti School of Film & Theatre"
-        data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटर">
-        Abhivyakti School of Film & Theatre
-    </h2>
+        <h2 data-en="Abhivyakti School of Film & Theatre"
+            data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटर">
+            Abhivyakti School of Film & Theatre
+        </h2>
 
-    <p data-en="Abhivyakti School of Film & Theatre is a theatre education program in Gadhinglaj."
-       data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटर हा गडहिंग्लजमधील नाट्य शिक्षण कार्यक्रम आहे.">
-        Abhivyakti School of Film & Theatre is a theatre
-        education program in Gadhinglaj.
-    </p>
+        <p data-en="Abhivyakti School of Film & Theatre is a theatre education program in Gadhinglaj."
+           data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटर हा गडहिंग्लजमधील नाट्य शिक्षण कार्यक्रम आहे.">
+            Abhivyakti School of Film & Theatre is a theatre
+            education program in Gadhinglaj.
+        </p>
 
-    <p data-en="The Program focuses on practical theatre training, creativity, self-development and social awareness."
-       data-mr="या कार्यक्रमात प्रात्यक्षिक नाट्य प्रशिक्षण, सर्जनशीलता, व्यक्तिमत्त्व विकास आणि सामाजिक जागरूकतेवर भर दिला जातो.">
-        The Program focuses on practical theatre training,
-        creativity,self-development and social awareness.
-    </p>
+        <p data-en="The Program focuses on practical theatre training, creativity, self-development and social awareness."
+           data-mr="या कार्यक्रमात प्रात्यक्षिक नाट्य प्रशिक्षण, सर्जनशीलता, व्यक्तिमत्त्व विकास आणि सामाजिक जागरूकतेवर भर दिला जातो.">
+            The Program focuses on practical theatre training,
+            creativity,self-development and social awareness.
+        </p>
 
-</section>
+    </section>
+
 
     <!-- Course Overview -->
 
     <section class="content-section">
 
-        <h2>Course Overview</h2>
+        <h2 data-en="Course Overview"
+            data-mr="कोर्सचा आढावा">
+            Course Overview
+        </h2>
 
-        <h3>About the Course</h3>
+        <h3 data-en="About the Course"
+            data-mr="कोर्सबद्दल">
+            About the Course
+        </h3>
 
-        <p>
+        <p data-en="The Abhivyakti theatre program is designed to develop acting skills, creativity, confidence and stage performance through practical theatre training."
+           data-mr="अभिव्यक्ती थिएटर कार्यक्रम प्रात्यक्षिक नाट्य प्रशिक्षणाद्वारे अभिनय कौशल्य, सर्जनशीलता, आत्मविश्वास आणि स्टेजवरील सादरीकरण विकसित करण्यासाठी तयार करण्यात आला आहे.">
             The Abhivyakti theatre program is designed to develop
             acting skills, creativity, confidence and stage performance
             through practical theatre training.
         </p>
 
-        <h3>Course Duration</h3>
+
+        <h3 data-en="Course Duration"
+            data-mr="कोर्सचा कालावधी">
+            Course Duration
+        </h3>
 
         <p>
-            <strong>Duration:</strong> 3 Months
+            <strong data-en="Duration:"
+                      data-mr="कालावधी:">
+                Duration:
+            </strong>
+            3 Months
         </p>
 
-        <h3>Certificate Completion</h3>
 
-        <p>
+        <h3 data-en="Certificate Completion"
+            data-mr="प्रमाणपत्र पूर्णता">
+            Certificate Completion
+        </h3>
+
+        <p data-en="Students who successfully complete the course receive a Certificate of Completion."
+           data-mr="कोर्स यशस्वीरित्या पूर्ण करणाऱ्या विद्यार्थ्यांना पूर्णता प्रमाणपत्र मिळते.">
             Students who successfully complete the course receive
             a Certificate of Completion.
         </p>
 
-        <p>
+        <p data-en="🎓 Certificate of Completion"
+           data-mr="🎓 पूर्णता प्रमाणपत्र">
             🎓 Certificate of Completion
         </p>
 
@@ -154,19 +272,32 @@
 
     <section class="content-section">
 
-        <h2>About Us</h2>
+        <h2 data-en="About Us"
+            data-mr="आमच्याबद्दल">
+            About Us
+        </h2>
 
-        <h3>About Abhivyakti</h3>
 
-        <p>
+        <h3 data-en="About Abhivyakti"
+            data-mr="अभिव्यक्तीबद्दल">
+            About Abhivyakti
+        </h3>
+
+        <p data-en="Abhivyakti School of Film & Theatre is a theatre education initiative in Gadhinglaj focused on practical learning, creativity and performance."
+           data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटर हा गडहिंग्लजमधील प्रात्यक्षिक शिक्षण, सर्जनशीलता आणि सादरीकरणावर आधारित नाट्य शिक्षण उपक्रम आहे.">
             Abhivyakti School of Film & Theatre is a theatre education
             initiative in Gadhinglaj focused on practical learning,
             creativity and performance.
         </p>
 
-        <h3>Our Faculty</h3>
 
-        <p>
+        <h3 data-en="Our Faculty"
+            data-mr="आमचे शिक्षक">
+            Our Faculty
+        </h3>
+
+        <p data-en="Our faculty members guide students through practical theatre exercises, acting training, voice and speech development and stage performance."
+           data-mr="आमचे शिक्षक विद्यार्थ्यांना प्रात्यक्षिक नाट्य सराव, अभिनय प्रशिक्षण, आवाज व भाषण विकास आणि स्टेज सादरीकरणासाठी मार्गदर्शन करतात.">
             Our faculty members guide students through practical theatre
             exercises, acting training, voice and speech development
             and stage performance.
@@ -179,28 +310,84 @@
 
     <section class="content-section">
 
-        <h2>Types of Courses</h2>
+        <h2 data-en="Types of Courses"
+            data-mr="कोर्सचे प्रकार">
+            Types of Courses
+        </h2>
 
-        <h3>Foundation in Acting</h3>
 
-        <p>
+        <h3 data-en="Foundation in Acting"
+            data-mr="अभिनयाची मूलभूत माहिती">
+            Foundation in Acting
+        </h3>
+
+        <p data-en="A foundation-level course focusing on basic acting techniques, expressions, character development and stage confidence."
+           data-mr="मूलभूत अभिनय तंत्र, भाव, व्यक्तिरेखा विकास आणि स्टेजवरील आत्मविश्वासावर केंद्रित प्राथमिक स्तरावरील कोर्स.">
             A foundation-level course focusing on basic acting techniques,
             expressions, character development and stage confidence.
         </p>
 
-        <h3>Advanced Theatre and Acting</h3>
 
-        <p>
+        <h3 data-en="Advanced Theatre and Acting"
+            data-mr="प्रगत थिएटर आणि अभिनय">
+            Advanced Theatre and Acting
+        </h3>
+
+        <p data-en="Advanced practical training in theatre and acting, including performance techniques, character work and stage activities."
+           data-mr="सादरीकरण तंत्र, व्यक्तिरेखा आणि स्टेजवरील उपक्रमांसह थिएटर आणि अभिनयाचे प्रगत प्रात्यक्षिक प्रशिक्षण.">
             Advanced practical training in theatre and acting, including
             performance techniques, character work and stage activities.
         </p>
 
-        <h3>Voice and Speech Training</h3>
 
-        <p>
+        <h3 data-en="Voice and Speech Training"
+            data-mr="आवाज आणि भाषण प्रशिक्षण">
+            Voice and Speech Training
+        </h3>
+
+        <p data-en="Training focused on voice modulation, pronunciation, speech clarity, dialogue delivery and effective communication."
+           data-mr="आवाजातील चढ-उतार, उच्चार, भाषणातील स्पष्टता, संवाद सादरीकरण आणि प्रभावी संवाद कौशल्यावर केंद्रित प्रशिक्षण.">
             Training focused on voice modulation, pronunciation, speech
             clarity, dialogue delivery and effective communication.
         </p>
+
+    </section>
+
+
+    <!-- ================= ABHIVYAKTI GALLERY ================= -->
+
+    <section class="gallery-section">
+
+        <h2 class="gallery-title"
+            data-en="Abhivyakti Gallery"
+            data-mr="अभिव्यक्ती गॅलरी">
+            Abhivyakti Gallery
+        </h2>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="gallery/abhi1.png"
+                     alt="Abhivyakti Theatre Performance">
+            </div>
+
+            <div class="gallery-item">
+                <img src="gallery/abhi2.png"
+                     alt="Abhivyakti Acting Performance">
+            </div>
+
+            <div class="gallery-item">
+                <img src="gallery/abhi3.png"
+                     alt="Abhivyakti Theatre Training">
+            </div>
+
+            <div class="gallery-item">
+                <img src="gallery/abhi4.png"
+                     alt="Abhivyakti Stage Performance">
+            </div>
+
+        </div>
 
     </section>
 
@@ -209,23 +396,27 @@
 
     <section class="content-section brochure-section">
 
-    <h2>Abhivyakti Brochure</h2>
+        <h2 data-en="Abhivyakti Brochure"
+            data-mr="अभिव्यक्ती ब्रोशर">
+            Abhivyakti Brochure
+        </h2>
 
-    <p>
-        Explore the complete details of the Abhivyakti School of Film & Theatre.
-        The brochure provides information about the courses, training and program details.
-        Download the brochure to know more about Abhivyakti.
-    </p>
+        <p data-en="Explore the complete details of the Abhivyakti School of Film & Theatre. The brochure provides information about the courses, training and program details. Download the brochure to know more about Abhivyakti."
+           data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटरची संपूर्ण माहिती जाणून घ्या. ब्रोशरमध्ये कोर्स, प्रशिक्षण आणि कार्यक्रमाची माहिती दिली आहे. अभिव्यक्तीबद्दल अधिक जाणून घेण्यासाठी ब्रोशर डाउनलोड करा.">
+            Explore the complete details of the Abhivyakti School of Film & Theatre.
+            The brochure provides information about the courses, training and program details.
+            Download the brochure to know more about Abhivyakti.
+        </p>
 
-    <a href="abhivyakti-brochure.pdf"
-       download
-       class="brochure-btn"
-       data-en="Download Brochure"
-       data-mr="ब्रोशर डाउनलोड करा">
-        Download Brochure
-    </a>
+        <a href="abhivyakti-brochure.pdf"
+           download
+           class="brochure-btn"
+           data-en="Download Brochure"
+           data-mr="ब्रोशर डाउनलोड करा">
+            Download Brochure
+        </a>
 
-</section>
+    </section>
 
 </main>
 
@@ -238,6 +429,7 @@
         </svg>
     </a>
 
+
     <a href="https://www.instagram.com/tri_performing_arts/" target="_blank" class="instagram-icon">
         <svg viewBox="0 0 24 24">
             <rect x="3" y="3" width="18" height="18" rx="5"/>
@@ -246,6 +438,7 @@
         </svg>
     </a>
 
+
     <a href="https://www.youtube.com/" target="_blank" class="youtube-icon">
         <svg viewBox="0 0 24 24">
             <rect x="2" y="5" width="20" height="14" rx="4"/>
@@ -253,16 +446,27 @@
         </svg>
     </a>
 
-    <a href="https://wa.me/919356769743" target="_blank" class="whatsapp-icon">
+
+    <a href="https://wa.me/919890654588?text=Hello%2C%20I%20am%20interested%20in%20TRI%20School%20of%20Performing%20Arts."
+       target="_blank"
+       class="whatsapp-icon">
+
         <svg viewBox="0 0 32 32">
+
             <path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.8 6.4L3 29l6.8-1.8C11.7 28.4 13.8 29 16 29c7.2 0 13-5.8 13-13S23.2 3 16 3z"
-                  fill="none" stroke="white" stroke-width="2"/>
-            <path d="M11.5 9.8c-.4 0-.8.2-1 .6-.3.5-.8 1.6-1.7-2.2-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.7-1.7c-.2-.5-.5-.7-.8-.7z"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"/>
+
+            <path d="M11.5 9.8c-.4 0-.8.2-1 .6-.3.5-.8 1.6-.8 2.4 0 1.3.9 3.1 2.3 4.7 1.4 1.7 3.4 3.1 5.3 3.7.7.2 1.4.1 1.9-.2.5-.3 1.2-1 1.4-1.5.2-.5.2-.9.1-1.1-.1-.2-.4-.3-.8-.5l-1.7-.8c-.3-.1-.6-.2-.8.2l-.7.9c-.2.3-.4.3-.7.2-.4-.2-1.5-.6-2.3-1.4-.9-.8-1.5-1.8-1.7-2.2-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.7-1.7c-.2-.5-.5-.7-.8-.7z"
                   fill="white"/>
+
         </svg>
     </a>
 
-    <a href="#" class="ai-agent-button"
+
+    <a href="#"
+       class="ai-agent-button"
        onclick="openAIChat(); return false;"
        title="TRI Assistant">
         TRI Assistant
@@ -279,15 +483,22 @@
 <div id="aiChatBox" class="ai-chat-box">
 
     <div class="ai-chat-header">
+
         <span>TRI Assistant</span>
+
         <button onclick="closeAIChat()">×</button>
+
     </div>
 
+
     <div id="aiChatMessages" class="ai-chat-messages">
+
         <div class="ai-message">
             Hi! I'm TRI Assistant. How can I help you?
         </div>
+
     </div>
+
 
     <div class="ai-chat-input">
 
@@ -297,11 +508,14 @@
             placeholder="Type your message..."
         >
 
-        <button onclick="sendAIMessage()">Send</button>
+        <button onclick="sendAIMessage()">
+            Send
+        </button>
 
     </div>
 
 </div>
+
 
 </body>
 </html>
