@@ -4,15 +4,676 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>TRI - About</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           ABOUT PAGE
+        ===================================================== */
+
+        .about-page {
+            background: #ffffff;
+            color: #241b2d;
+        }
+
+        /* =====================================================
+           CENTER LOGO
+           ORIGINAL TRI LOGO SIZE
+        ===================================================== */
+
+        .about-page .tri-circle-logo {
+            width: 330px;
+            min-width: 330px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .about-page .tri-main {
+            display: block !important;
+            white-space: nowrap !important;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 48px !important;
+            font-weight: 700;
+
+            line-height: 1;
+
+            letter-spacing: 2px;
+
+            color: #c9a25a !important;
+
+            text-align: center;
+        }
+
+        .about-page .tri-main span {
+            display: inline-block;
+        }
+
+        .about-page .tri-r {
+            position: relative;
+        }
+
+        .about-page .tri-r::after {
+            content: "";
+
+            position: absolute;
+
+            width: 45px;
+            height: 14px;
+
+            left: 2px;
+            bottom: -3px;
+
+            border-bottom: 2px solid #c9a25a;
+            border-right: 2px solid #c9a25a;
+
+            border-radius: 0 0 100% 0;
+
+            transform: rotate(-10deg);
+        }
+
+        .about-page .tri-sub1 {
+            margin-top: 5px;
+
+            color: #ffffff !important;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            white-space: nowrap;
+
+            text-align: center;
+        }
+
+        .about-page .tri-divider {
+            width: 90%;
+
+            margin: 8px auto 6px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+        }
+
+        .about-page .tri-divider .line {
+            flex: 1;
+
+            height: 1px;
+
+            background: #c9a25a;
+        }
+
+        .about-page .tri-divider .diamond {
+            width: 7px;
+            height: 7px;
+
+            background: #c9a25a;
+
+            transform: rotate(45deg);
+
+            flex-shrink: 0;
+        }
+
+        .about-page .tri-sub2 {
+            color: #e5d8eb !important;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            white-space: nowrap;
+
+            text-align: center;
+        }
+
+
+        /* =====================================================
+           ABOUT HERO
+        ===================================================== */
+
+        .about-hero {
+            min-height: 430px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 70px 25px;
+
+            background: linear-gradient(
+                135deg,
+                #17253f 0%,
+                #203b5d 50%,
+                #17253f 100%
+            );
+        }
+
+        .about-hero-content {
+            max-width: 800px;
+        }
+
+        .about-eyebrow {
+            color: #c9a25a;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 18px;
+        }
+
+        .about-hero h1 {
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(45px, 7vw, 72px);
+
+            margin-bottom: 15px;
+        }
+
+        .about-hero h1 span {
+            color: #c9a25a;
+        }
+
+        .about-hero p {
+            max-width: 680px;
+
+            margin: auto;
+
+            color: #ddd2e4;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .about-intro {
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding: 75px 30px 55px;
+
+            text-align: center;
+        }
+
+        .about-intro-label {
+            color: #c9a25a;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+        .about-intro h2 {
+            color: #3a2448;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 34px;
+
+            margin-bottom: 18px;
+        }
+
+        .about-intro p {
+            max-width: 800px;
+
+            margin: auto;
+
+            color: #675b6d;
+
+            font-size: 16px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =====================================================
+           ABOUT - 3 SMALL PURPLE BOXES
+        ===================================================== */
+
+        .about-card-section {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 25px 30px 75px;
+        }
+
+        .about-card-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .about-info-card {
+            min-height: 235px;
+
+            padding: 28px 23px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            background: linear-gradient(
+                to bottom,
+                #aaa5b1 0%,
+                #817888 42%,
+                #33223e 100%
+            );
+
+            border: 1px solid #c9a25a;
+
+            border-radius: 0 0 12px 12px;
+
+            color: #ffffff;
+
+            transition: 0.3s;
+        }
+
+        .about-info-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 28px rgba(50, 30, 60, 0.20);
+        }
+
+        .about-card-number {
+            color: #e0c274;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 24px;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+        .about-info-card h3 {
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 23px;
+
+            margin-bottom: 10px;
+        }
+
+        .about-info-card p {
+            color: #f1edf3;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           WHAT TRI IS ABOUT
+        ===================================================== */
+
+        .about-offers-section {
+            background: #ffffff;
+
+            padding: 75px 30px;
+        }
+
+        .about-section-title {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        .about-section-title small {
+            color: #c9a25a;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+        }
+
+        .about-section-title h2 {
+            color: #3a2448;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 32px;
+
+            margin-top: 8px;
+        }
+
+        .about-offer-grid {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+
+        /* =====================================================
+           WHY TRI - PURPLE BOXES
+        ===================================================== */
+
+        .about-offer-card {
+            min-height: 205px;
+
+            padding: 28px 23px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            background: linear-gradient(
+                to bottom,
+                #aaa5b1 0%,
+                #817888 42%,
+                #33223e 100%
+            );
+
+            border: 1px solid #c9a25a;
+
+            border-radius: 0 0 12px 12px;
+
+            color: #ffffff;
+
+            box-shadow: none;
+
+            transition: 0.3s;
+        }
+
+        .about-offer-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 28px rgba(50, 30, 60, 0.20);
+        }
+
+        .about-offer-card h3 {
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+        .about-offer-card p {
+            color: #f1edf3;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           GADHINGLAJ - PURPLE BOX
+        ===================================================== */
+
+        .about-location-section {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 70px 30px;
+
+            text-align: center;
+        }
+
+        .about-location-box {
+            max-width: 650px;
+
+            margin: auto;
+
+            padding: 45px 25px;
+
+            background: linear-gradient(
+                to bottom,
+                #aaa5b1 0%,
+                #817888 42%,
+                #33223e 100%
+            );
+
+            border: 1px solid #c9a25a;
+
+            border-radius: 0 0 12px 12px;
+
+            color: #ffffff;
+
+            box-shadow: none;
+
+            transition: 0.3s;
+        }
+
+        .about-location-box:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 28px rgba(50, 30, 60, 0.20);
+        }
+
+        .about-location-box .location-icon {
+            font-size: 30px;
+
+            margin-bottom: 12px;
+        }
+
+        .about-location-box h2 {
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 30px;
+
+            margin-bottom: 8px;
+        }
+
+        .about-location-box p {
+            color: #f1edf3;
+
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .about-cta {
+            padding: 75px 25px;
+
+            text-align: center;
+
+            background: linear-gradient(
+                135deg,
+                #17253f 0%,
+                #203b5d 50%,
+                #17253f 100%
+            );
+
+            border-top: 2px solid #c9a25a;
+        }
+
+        .about-cta small {
+            color: #c9a25a;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+        }
+
+        .about-cta h2 {
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 38px;
+
+            margin: 14px 0;
+        }
+
+        .about-cta p {
+            max-width: 650px;
+
+            margin: 0 auto 25px;
+
+            color: #ddd2e4;
+
+            line-height: 1.7;
+        }
+
+        .about-cta-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 14px;
+
+            flex-wrap: wrap;
+        }
+
+        .about-gold-btn,
+        .about-outline-btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 12px 23px;
+
+            border-radius: 6px;
+
+            font-weight: 700;
+
+            transition: 0.25s;
+        }
+
+        .about-gold-btn {
+            background: #c9a25a;
+
+            color: #21152f;
+        }
+
+        .about-gold-btn:hover {
+            background: #c9a25a;
+
+            color: #21152f;
+
+            transform: translateY(-3px);
+        }
+
+        .about-outline-btn {
+            border: 1px solid #c9a25a;
+
+            color: #ffffff;
+
+            background: transparent;
+        }
+
+        .about-outline-btn:hover {
+            background: #c9a25a;
+
+            color: #21152f;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .about-page .tri-circle-logo {
+                width: 330px;
+                min-width: 330px;
+            }
+
+            .about-card-grid,
+            .about-offer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero {
+                min-height: 380px;
+            }
+
+            .about-intro {
+                padding: 60px 22px 40px;
+            }
+
+            .about-card-section,
+            .about-offers-section,
+            .about-location-section {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .about-cta h2 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+
 </head>
 
-<body>
+
+<body class="about-page">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
     <div class="tri-circle-logo">
+
         <div class="tri-main">
             T<span class="tri-r">R</span>I
         </div>
@@ -24,9 +685,13 @@
         </div>
 
         <div class="tri-divider">
+
             <span class="line"></span>
+
             <span class="diamond"></span>
+
             <span class="line"></span>
+
         </div>
 
         <div class="tri-sub2"
@@ -34,157 +699,523 @@
              data-mr="संगीत • नृत्य • नाट्य">
             MUSIC &nbsp;•&nbsp; DANCE &nbsp;•&nbsp; THEATRE
         </div>
+
     </div>
 
+
     <nav>
+
         <ul class="navbar">
 
+            <!-- HOME -->
+
+            <li class="home-nav">
+
+                <a href="index.html"
+                   data-en="Home"
+                   data-mr="मुख्यपृष्ठ">
+                    Home
+                </a>
+
+            </li>
+
+
+            <!-- ABOUT -->
+
             <li>
+
                 <a href="about.html"
                    class="active"
                    data-en="About"
                    data-mr="आमच्याबद्दल">
                     About
                 </a>
+
             </li>
 
+
+            <!-- DIVYAAM -->
+
             <li>
+
                 <a href="diviyan.html"
-                   data-en="Diviyan"
-                   data-mr="दिवियन">
-                    Diviyam
+                   data-en="Divyaam"
+                   data-mr="दिव्याम">
+                    Divyaam
                 </a>
+
             </li>
 
+
+            <!-- ABHIVYAKTI -->
+
             <li>
+
                 <a href="abhivyakti.html"
                    data-en="Abhivyakti"
                    data-mr="अभिव्यक्ती">
                     Abhivyakti
                 </a>
+
             </li>
 
+
+            <!-- GABHA -->
+
             <li>
+
                 <a href="gabha.html"
                    data-en="Gabha"
                    data-mr="गाभा">
                     Gabha
                 </a>
+
             </li>
 
+
             <!-- BOOKING -->
-           <li class="dropdown">
 
-    <a href="#"
-       onclick="
-       event.preventDefault();
-       const menu = document.getElementById('bookingMenu');
-       menu.style.display =
-       menu.style.display === 'block' ? 'none' : 'block';
-       "
-       data-en="Booking ▾"
-       data-mr="बुकिंग ▾">
-        Booking ▾
-    </a>
+            <li class="dropdown">
 
-    <ul id="bookingMenu"
-        class="submenu">
+                <a href="#"
+                   onclick="
+                   event.preventDefault();
+                   const menu = document.getElementById('bookingMenu');
+                   menu.style.display =
+                   menu.style.display === 'block'
+                   ? 'none'
+                   : 'block';
+                   "
+                   data-en="Booking ▾"
+                   data-mr="बुकिंग ▾">
+                    Booking ▾
+                </a>
 
-        <li>
-            <a href="booknow.html"
-               data-en="Book Now"
-               data-mr="आता बुक करा">
-                Book Now
-            </a>
-        </li>
+                <ul id="bookingMenu"
+                    class="submenu">
 
-    </ul>
+                    <li>
 
-</li>
+                        <a href="booknow.html"
+                           data-en="Book Now"
+                           data-mr="आता बुक करा">
+                            Book Now
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
 
             <!-- CONTACT -->
+
             <li>
+
                 <a href="contact.html"
                    data-en="Contact"
                    data-mr="संपर्क">
                     Contact
                 </a>
+
             </li>
 
+
             <!-- LANGUAGE -->
+
             <li>
+
                 <button id="languageBtn"
                         class="language-btn"
                         onclick="toggleLanguage()">
                     मराठी
                 </button>
+
             </li>
 
         </ul>
+
     </nav>
 
 </header>
 
+
+
 <main>
 
-    <section id="about" class="content-section">
 
-        <h2 data-en="TRI School of Performing Arts"
-            data-mr="TRI परफॉर्मिंग आर्ट्स स्कूल">
-            TRI School of Performing Arts
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="about-hero">
+
+    <div class="about-hero-content">
+
+        <div class="about-eyebrow"
+             data-en="MUSIC • DANCE • THEATRE"
+             data-mr="संगीत • नृत्य • नाट्य">
+            MUSIC • DANCE • THEATRE
+        </div>
+
+        <h1>
+            About <span>TRI</span>
+        </h1>
+
+        <p
+            data-en="TRI School of Performing Arts is a creative space in Gadhinglaj where music, dance and theatre come together."
+            data-mr="TRI परफॉर्मिंग आर्ट्स स्कूल हे गडहिंग्लजमधील एक सर्जनशील व्यासपीठ आहे जिथे संगीत, नृत्य आणि नाट्य एकत्र येतात.">
+            TRI School of Performing Arts is a creative space in
+            Gadhinglaj where music, dance and theatre come together.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="about-intro">
+
+    <div class="about-intro-label"
+         data-en="WHO WE ARE"
+         data-mr="आमच्याबद्दल">
+        WHO WE ARE
+    </div>
+
+    <h2
+        data-en="TRI School of Performing Arts"
+        data-mr="TRI परफॉर्मिंग आर्ट्स स्कूल">
+        TRI School of Performing Arts
+    </h2>
+
+    <p
+        data-en="TRI is a performing arts space focused on Music, Dance and Theatre. The school provides a creative environment where learners can explore their interests, develop skills and express themselves through performing arts."
+        data-mr="TRI हे संगीत, नृत्य आणि नाट्य यांवर केंद्रित परफॉर्मिंग आर्ट्सचे व्यासपीठ आहे. विद्यार्थ्यांना त्यांच्या आवडी शोधण्यासाठी, कौशल्ये विकसित करण्यासाठी आणि परफॉर्मिंग आर्ट्सद्वारे स्वतःला व्यक्त करण्यासाठी येथे सर्जनशील वातावरण मिळते.">
+        TRI is a performing arts space focused on Music, Dance and Theatre.
+        The school provides a creative environment where learners can
+        explore their interests, develop skills and express themselves
+        through performing arts.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     3 PURPLE BOXES
+===================================================== -->
+
+<section class="about-card-section">
+
+    <div class="about-card-grid">
+
+
+        <div class="about-info-card">
+
+            <div class="about-card-number">
+                01
+            </div>
+
+            <h3
+                data-en="Music"
+                data-mr="संगीत">
+                Music
+            </h3>
+
+            <p
+                data-en="A space to explore musical interest, rhythm and creative expression."
+                data-mr="संगीताची आवड, लय आणि सर्जनशील अभिव्यक्ती शोधण्यासाठी एक व्यासपीठ.">
+                A space to explore musical interest,
+                rhythm and creative expression.
+            </p>
+
+        </div>
+
+
+        <div class="about-info-card">
+
+            <div class="about-card-number">
+                02
+            </div>
+
+            <h3
+                data-en="Dance"
+                data-mr="नृत्य">
+                Dance
+            </h3>
+
+            <p
+                data-en="An environment where movement, rhythm and expression become part of learning."
+                data-mr="हालचाल, लय आणि अभिव्यक्ती यांचा शिक्षणाचा भाग बनणारे वातावरण.">
+                An environment where movement,
+                rhythm and expression become part of learning.
+            </p>
+
+        </div>
+
+
+        <div class="about-info-card">
+
+            <div class="about-card-number">
+                03
+            </div>
+
+            <h3
+                data-en="Theatre"
+                data-mr="नाट्य">
+                Theatre
+            </h3>
+
+            <p
+                data-en="A creative space to develop expression, confidence and storytelling through performance."
+                data-mr="सादरीकरणाद्वारे अभिव्यक्ती, आत्मविश्वास आणि कथाकथन विकसित करण्यासाठी सर्जनशील व्यासपीठ.">
+                A creative space to develop expression,
+                confidence and storytelling through performance.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY TRI
+===================================================== -->
+
+<section class="about-offers-section">
+
+    <div class="about-section-title">
+
+        <small
+            data-en="OUR APPROACH"
+            data-mr="आमचा दृष्टिकोन">
+            OUR APPROACH
+        </small>
+
+        <h2
+            data-en="Why Choose TRI?"
+            data-mr="TRI का निवडावे?">
+            Why Choose TRI?
         </h2>
 
-        <p data-en="Performing Arts School"
-           data-mr="परफॉर्मिंग आर्ट्स स्कूल">
-            Performing Arts School
+    </div>
+
+
+    <div class="about-offer-grid">
+
+
+        <div class="about-offer-card">
+
+            <h3
+                data-en="Creative Learning"
+                data-mr="सर्जनशील शिक्षण">
+                Creative Learning
+            </h3>
+
+            <p
+                data-en="Learning through performing arts can encourage creativity, curiosity and active participation."
+                data-mr="परफॉर्मिंग आर्ट्सद्वारे शिकणे सर्जनशीलता, जिज्ञासा आणि सक्रिय सहभागाला प्रोत्साहन देऊ शकते.">
+                Learning through performing arts can encourage
+                creativity, curiosity and active participation.
+            </p>
+
+        </div>
+
+
+        <div class="about-offer-card">
+
+            <h3
+                data-en="Skill Development"
+                data-mr="कौशल्य विकास">
+                Skill Development
+            </h3>
+
+            <p
+                data-en="Music, dance and theatre provide opportunities to develop performance, communication and creative skills."
+                data-mr="संगीत, नृत्य आणि नाट्याद्वारे सादरीकरण, संवाद आणि सर्जनशील कौशल्ये विकसित करण्याच्या संधी मिळतात.">
+                Music, dance and theatre provide opportunities
+                to develop performance, communication and creative skills.
+            </p>
+
+        </div>
+
+
+        <div class="about-offer-card">
+
+            <h3
+                data-en="Self Expression"
+                data-mr="स्व-अभिव्यक्ती">
+                Self Expression
+            </h3>
+
+            <p
+                data-en="TRI encourages learners to discover their own voice and express ideas through creative performance."
+                data-mr="TRI विद्यार्थ्यांना स्वतःची अभिव्यक्ती शोधण्यासाठी आणि सर्जनशील सादरीकरणातून विचार व्यक्त करण्यासाठी प्रोत्साहित करते.">
+                TRI encourages learners to discover their own voice
+                and express ideas through creative performance.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GADHINGLAJ PURPLE BOX
+===================================================== -->
+
+<section class="about-location-section">
+
+    <div class="about-location-box">
+
+        <div class="location-icon">
+            📍
+        </div>
+
+        <h2
+            data-en="Gadhinglaj"
+            data-mr="गडहिंग्लज">
+            Gadhinglaj
+        </h2>
+
+        <p
+            data-en="TRI School of Performing Arts"
+            data-mr="TRI परफॉर्मिंग आर्ट्स स्कूल">
+            TRI School of Performing Arts
         </p>
 
-        <p data-en="🎶 Music | 💃 Dance | 🎭 Theatre"
-           data-mr="🎶 संगीत | 💃 नृत्य | 🎭 नाट्य">
-            🎶 Music | 💃 Dance | 🎭 Theatre
-        </p>
+    </div>
 
-        <p data-en="📍 Gadhinglaj"
-           data-mr="📍 गडहिंग्लज">
-            📍 Gadhinglaj
-        </p>
+</section>
 
-    </section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="about-cta">
+
+    <small
+        data-en="YOUR CREATIVE JOURNEY"
+        data-mr="तुमचा सर्जनशील प्रवास">
+        YOUR CREATIVE JOURNEY
+    </small>
+
+    <h2
+        data-en="Ready to Explore TRI?"
+        data-mr="TRI जाणून घेण्यासाठी तयार आहात?">
+        Ready to Explore TRI?
+    </h2>
+
+    <p
+        data-en="Explore our creative spaces and discover the area of performing arts that interests you."
+        data-mr="आमचे सर्जनशील विभाग जाणून घ्या आणि तुम्हाला आवडणारे परफॉर्मिंग आर्ट्सचे क्षेत्र शोधा.">
+        Explore our creative spaces and discover the area
+        of performing arts that interests you.
+    </p>
+
+
+    <div class="about-cta-buttons">
+
+        <a href="index.html"
+           class="about-outline-btn"
+           data-en="Back to Home"
+           data-mr="मुख्यपृष्ठावर जा">
+            Back to Home
+        </a>
+
+        <a href="booknow.html"
+           class="about-gold-btn"
+           data-en="Book Now"
+           data-mr="आता बुक करा">
+            Book Now
+        </a>
+
+    </div>
+
+</section>
+
 
 </main>
+
+
+
+<!-- =====================================================
+     SOCIAL MEDIA
+===================================================== -->
 
 <div class="social-bar">
 
     <a href="https://www.facebook.com/"
-       target="_blank"
-       class="facebook-icon">
+       target="_blank">
+
         <svg viewBox="0 0 24 24">
+
             <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1z"/>
+
         </svg>
+
     </a>
+
 
     <a href="https://www.instagram.com/tri_performing_arts/"
-       target="_blank"
-       class="instagram-icon">
+       target="_blank">
+
         <svg viewBox="0 0 24 24">
-            <rect x="3" y="3" width="18" height="18" rx="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="1"/>
+
+            <rect x="3"
+                  y="3"
+                  width="18"
+                  height="18"
+                  rx="5"/>
+
+            <circle cx="12"
+                    cy="12"
+                    r="4"/>
+
+            <circle cx="17.5"
+                    cy="6.5"
+                    r="1"/>
+
         </svg>
+
     </a>
+
 
     <a href="https://www.youtube.com/"
-       target="_blank"
-       class="youtube-icon">
+       target="_blank">
+
         <svg viewBox="0 0 24 24">
-            <rect x="2" y="5" width="20" height="14" rx="4"/>
+
+            <rect x="2"
+                  y="5"
+                  width="20"
+                  height="14"
+                  rx="4"/>
+
             <polygon points="10,8 17,12 10,16"/>
+
         </svg>
+
     </a>
 
+
     <a href="https://wa.me/919356769743"
-       target="_blank"
-       class="whatsapp-icon">
+       target="_blank">
+
         <svg viewBox="0 0 32 32">
 
             <path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.8 6.4L3 29l6.8-1.8C11.7 28.4 13.8 29 16 29c7.2 0 13-5.8 13-13S23.2 3 16 3z"
@@ -196,35 +1227,49 @@
                   fill="white"/>
 
         </svg>
+
     </a>
+
 
     <a href="#"
        class="ai-agent-button"
-       onclick="openAIChat(); return false;"
-       title="TRI Assistant">
+       onclick="openAIChat(); return false;">
         TRI Assistant
     </a>
 
 </div>
 
-<script src="script.js"></script>
-<script type="module" src="firebase.js"></script>
-<script type="module" src="ai.js"></script>
 
-<div id="aiChatBox" class="ai-chat-box">
+
+<!-- =====================================================
+     AI CHAT
+===================================================== -->
+
+<div id="aiChatBox"
+     class="ai-chat-box">
 
     <div class="ai-chat-header">
-        <span>TRI Assistant</span>
-        <button onclick="closeAIChat()">×</button>
+
+        <span>
+            TRI Assistant
+        </span>
+
+        <button onclick="closeAIChat()">
+            ×
+        </button>
+
     </div>
 
-    <div id="aiChatMessages" class="ai-chat-messages">
+
+    <div id="aiChatMessages"
+         class="ai-chat-messages">
 
         <div class="ai-message">
             Hi! I'm TRI Assistant. How can I help you?
         </div>
 
     </div>
+
 
     <div class="ai-chat-input">
 
@@ -234,11 +1279,29 @@
             placeholder="Type your message..."
         >
 
-        <button onclick="sendAIMessage()">Send</button>
+        <button onclick="sendAIMessage()">
+            Send
+        </button>
 
     </div>
 
 </div>
 
+
+
+<!-- =====================================================
+     SCRIPTS
+===================================================== -->
+
+<script src="script.js"></script>
+
+<script type="module"
+        src="firebase.js"></script>
+
+<script type="module"
+        src="ai.js"></script>
+
+
 </body>
+
 </html>

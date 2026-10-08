@@ -2,146 +2,806 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRI</title>
-    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TRI School of Performing Arts</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
 </head>
+
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header>
 
+
+    <!-- TRI LOGO -->
+
     <div class="tri-circle-logo">
+
         <div class="tri-main">
             T<span class="tri-r">R</span>I
         </div>
 
-        <div class="tri-sub1" data-en="SCHOOL OF PERFORMING ARTS" data-mr="परफॉर्मिंग आर्ट्स स्कूल">
+
+        <div class="tri-sub1"
+             data-en="SCHOOL OF PERFORMING ARTS"
+             data-mr="परफॉर्मिंग आर्ट्स स्कूल">
+
             SCHOOL OF PERFORMING ARTS
+
         </div>
+
 
         <div class="tri-divider">
+
             <span class="line"></span>
+
             <span class="diamond"></span>
+
             <span class="line"></span>
+
         </div>
 
-        <div class="tri-sub2" data-en="MUSIC • DANCE • THEATRE" data-mr="संगीत • नृत्य • नाट्य">
+
+        <div class="tri-sub2"
+             data-en="MUSIC • DANCE • THEATRE"
+             data-mr="संगीत • नृत्य • नाट्य">
+
             MUSIC &nbsp;•&nbsp; DANCE &nbsp;•&nbsp; THEATRE
+
         </div>
+
     </div>
 
+
+
+    <!-- NAVIGATION -->
+
     <nav>
+
         <ul class="navbar">
 
-            <li>
-                <a href="about.html"
-                   data-en="About" data-mr="आमच्याबद्दल">
-                    About
-                </a>
-            </li>
+    <!-- HOME -->
+    <li class="home-nav">
+        <a href="index.html"
+           data-en="Home"
+           data-mr="मुख्यपृष्ठ">
+            Home
+        </a>
+    </li>
+
+    <!-- ABOUT -->
+    <li>
+        <a href="about.html"
+           data-en="About"
+           data-mr="आमच्याबद्दल">
+            About
+        </a>
+    </li>
 
             <li>
+
                 <a href="diviyan.html"
-                   data-en="Diviyan" data-mr="दिवियन">
-                    Diviyam
+                   data-en="Divyaam"
+                   data-mr="दिव्याम">
+
+                    Divyaam
+
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="abhivyakti.html"
-                   data-en="Abhivyakti" data-mr="अभिव्यक्ती">
+                   data-en="Abhivyakti"
+                   data-mr="अभिव्यक्ती">
+
                     Abhivyakti
+
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="gabha.html"
-                   data-en="Gabha" data-mr="गाभा">
+                   data-en="Gabha"
+                   data-mr="गाभा">
+
                     Gabha
+
                 </a>
+
             </li>
+
+
+            <!-- BOOKING -->
 
             <li class="dropdown">
 
                 <a href="#"
-                   onclick="toggleDropdown('bookingMenu'); return false;"
-                   data-en="Booking ▾" data-mr="बुकिंग ▾">
+                   onclick="
+                   event.preventDefault();
+                   const menu = document.getElementById('bookingMenu');
+                   menu.style.display =
+                   menu.style.display === 'block'
+                   ? 'none'
+                   : 'block';
+                   "
+                   data-en="Booking ▾"
+                   data-mr="बुकिंग ▾">
+
                     Booking ▾
+
                 </a>
 
-                <ul id="bookingMenu" class="submenu">
+
+                <ul id="bookingMenu"
+                    class="submenu">
 
                     <li>
+
                         <a href="booknow.html"
-                           data-en="Book Now" data-mr="आता बुक करा">
+                           data-en="Book Now"
+                           data-mr="आता बुक करा">
+
                             Book Now
+
                         </a>
+
                     </li>
 
                 </ul>
 
             </li>
 
+
+            <!-- CONTACT -->
+
             <li>
+
                 <a href="contact.html"
                    data-en="Contact"
                    data-mr="संपर्क">
+
                     Contact
+
                 </a>
+
             </li>
 
+
+            <!-- LANGUAGE -->
+
             <li>
+
                 <button id="languageBtn"
                         class="language-btn"
                         onclick="toggleLanguage()">
+
                     मराठी
+
                 </button>
+
             </li>
 
+
         </ul>
+
     </nav>
+
 
 </header>
 
+
+
+<!-- =====================================================
+     HOME PAGE
+===================================================== -->
+
 <main>
+
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="hero-section">
+
+
+        <div class="hero-content">
+
+
+            <p class="hero-small-text">
+
+                MUSIC • DANCE • THEATRE
+
+            </p>
+
+
+            <h1>
+
+                WELCOME TO <span>TRI</span>
+
+            </h1>
+
+
+            <h2>
+
+                School of Performing Arts
+
+            </h2>
+
+
+            <p>
+
+                Discover your creativity through
+
+                <strong>
+                    Music, Dance and Theatre.
+                </strong>
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+
+                <a href="booknow.html"
+                   class="primary-btn">
+
+                    Book Now
+
+                </a>
+
+
+                <a href="about.html"
+                   class="secondary-btn">
+
+                    Explore TRI
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         ABOUT TRI
+    ================================================== -->
+
+    <section class="home-section">
+
+
+        <div class="section-heading">
+
+            <span class="section-line"></span>
+
+            <h2>ABOUT TRI</h2>
+
+            <span class="section-line"></span>
+
+        </div>
+
+
+        <p class="section-intro">
+
+            TRI School of Performing Arts is a creative space
+            where students explore their talent, build confidence
+            and express themselves through performing arts.
+
+        </p>
+
+
+
+        <div class="home-card-grid">
+
+
+            <!-- MUSIC -->
+
+            <div class="home-card">
+
+
+                <div class="home-card-icon">
+                    ♪
+                </div>
+
+
+                <h3>
+                    Music
+                </h3>
+
+
+                <p>
+
+                    Learn music, develop your voice and
+                    discover the joy of musical expression.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- DANCE -->
+
+            <div class="home-card">
+
+
+                <div class="home-card-icon">
+                    ♫
+                </div>
+
+
+                <h3>
+                    Dance
+                </h3>
+
+
+                <p>
+
+                    Express yourself through movement,
+                    rhythm and creative dance.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- THEATRE -->
+
+            <div class="home-card">
+
+
+                <div class="home-card-icon">
+                    ★
+                </div>
+
+
+                <h3>
+                    Theatre
+                </h3>
+
+
+                <p>
+
+                    Build confidence and storytelling skills
+                    through theatre and performance.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         CREATIVE SPACES
+    ================================================== -->
+
+    <section class="home-section creative-spaces-section">
+
+
+        <div class="section-heading">
+
+            <span class="section-line"></span>
+
+            <h2>OUR CREATIVE SPACES</h2>
+
+            <span class="section-line"></span>
+
+        </div>
+
+
+        <p class="section-intro">
+
+            Explore the different creative spaces of TRI and
+            find the experience that inspires you.
+
+        </p>
+
+
+
+        <div class="creative-space-grid">
+
+
+            <!-- DIVYAAM -->
+
+            <div class="creative-space-card">
+
+                <div class="creative-space-content">
+
+
+                    <span class="creative-label">
+
+                        CLASSICAL • CULTURE • TRADITION
+
+                    </span>
+
+
+                    <h3>
+                        Divyaam
+                    </h3>
+
+
+                    <p>
+
+                        A space dedicated to classical arts,
+                        culture and traditional performing arts.
+
+                    </p>
+
+
+                    <a href="diviyan.html"
+                       class="card-link">
+
+                        Explore Divyaam →
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ABHIVYAKTI -->
+
+            <div class="creative-space-card">
+
+                <div class="creative-space-content">
+
+
+                    <span class="creative-label">
+
+                        FILM • THEATRE • EXPRESSION
+
+                    </span>
+
+
+                    <h3>
+                        Abhivyakti
+                    </h3>
+
+
+                    <p>
+
+                        A practical learning space for theatre,
+                        film, creativity and self-expression.
+
+                    </p>
+
+
+                    <a href="abhivyakti.html"
+                       class="card-link">
+
+                        Explore Abhivyakti →
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GABHA -->
+
+            <div class="creative-space-card">
+
+                <div class="creative-space-content">
+
+
+                    <span class="creative-label">
+
+                        CREATIVITY • LEARNING • GROWTH
+
+                    </span>
+
+
+                    <h3>
+                        Gabha
+                    </h3>
+
+
+                    <p>
+
+                        A creative space that encourages learning,
+                        imagination and personal growth.
+
+                    </p>
+
+
+                    <a href="gabha.html"
+                       class="card-link">
+
+                        Explore Gabha →
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         WHY TRI
+    ================================================== -->
+
+    <section class="home-section">
+
+
+        <div class="section-heading">
+
+            <span class="section-line"></span>
+
+            <h2>WHY CHOOSE TRI?</h2>
+
+            <span class="section-line"></span>
+
+        </div>
+
+
+
+        <div class="why-tri-grid">
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    01
+                </div>
+
+                <h3>
+                    Learn
+                </h3>
+
+                <p>
+
+                    Learn from experienced mentors
+                    in a supportive environment.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    02
+                </div>
+
+                <h3>
+                    Explore
+                </h3>
+
+                <p>
+
+                    Explore different forms of performing
+                    arts and discover your interests.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    03
+                </div>
+
+                <h3>
+                    Express
+                </h3>
+
+                <p>
+
+                    Express your ideas, emotions and
+                    creativity with confidence.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    04
+                </div>
+
+                <h3>
+                    Grow
+                </h3>
+
+                <p>
+
+                    Build confidence, discipline and
+                    communication through performance.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         CTA
+    ================================================== -->
+
+    <section class="home-cta-section">
+
+
+        <div class="home-cta-content">
+
+
+            <span class="cta-small">
+
+                YOUR CREATIVE JOURNEY STARTS HERE
+
+            </span>
+
+
+            <h2>
+
+                Begin Your Creative Journey
+
+            </h2>
+
+
+            <p>
+
+                Step into the world of Music, Dance and Theatre
+                with TRI School of Performing Arts.
+
+            </p>
+
+
+            <a href="booknow.html"
+               class="primary-btn">
+
+                Book Now
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
 
 </main>
 
-<script src="script.js"></script>
-<script type="module" src="firebase.js"></script>
-<script type="module" src="ai.js"></script>
 
-<!-- SIDE SOCIAL MEDIA -->
+
+<!-- =====================================================
+     SOCIAL MEDIA
+===================================================== -->
 
 <div class="social-bar">
 
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/" target="_blank" class="facebook-icon">
+
+    <!-- FACEBOOK -->
+
+    <a href="https://www.facebook.com/"
+       target="_blank"
+       class="facebook-icon">
+
         <svg viewBox="0 0 24 24">
+
             <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1z"/>
+
         </svg>
+
     </a>
 
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/tri_performing_arts/" target="_blank" class="instagram-icon">
+
+
+    <!-- INSTAGRAM -->
+
+    <a href="https://www.instagram.com/tri_performing_arts/"
+       target="_blank"
+       class="instagram-icon">
+
         <svg viewBox="0 0 24 24">
-            <rect x="3" y="3" width="18" height="18" rx="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="1"/>
+
+            <rect x="3"
+                  y="3"
+                  width="18"
+                  height="18"
+                  rx="5"/>
+
+            <circle cx="12"
+                    cy="12"
+                    r="4"/>
+
+            <circle cx="17.5"
+                    cy="6.5"
+                    r="1"/>
+
         </svg>
+
     </a>
 
-    <!-- YouTube -->
-    <a href="https://www.youtube.com/" target="_blank" class="youtube-icon">
+
+
+    <!-- YOUTUBE -->
+
+    <a href="https://www.youtube.com/"
+       target="_blank"
+       class="youtube-icon">
+
         <svg viewBox="0 0 24 24">
-            <rect x="2" y="5" width="20" height="14" rx="4"/>
+
+            <rect x="2"
+                  y="5"
+                  width="20"
+                  height="14"
+                  rx="4"/>
+
             <polygon points="10,8 17,12 10,16"/>
+
         </svg>
+
     </a>
 
-    <!-- WhatsApp -->
+
+
+    <!-- WHATSAPP -->
+
     <a href="https://wa.me/919890654588?text=Hello%2C%20I%20am%20interested%20in%20TRI%20School%20of%20Performing%20Arts."
        target="_blank"
        class="whatsapp-icon">
@@ -149,46 +809,114 @@
         <svg viewBox="0 0 32 32">
 
             <path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.8 6.4L3 29l6.8-1.8C11.7 28.4 13.8 29 16 29c7.2 0 13-5.8 13-13S23.2 3 16 3z"
-                  fill="none" stroke="white" stroke-width="2"/>
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"/>
+
 
             <path d="M11.5 9.8c-.4 0-.8.2-1 .6-.3.5-.8 1.6-.8 2.4 0 1.3.9 3.1 2.3 4.7 1.4 1.7 3.4 3.1 5.3 3.7.7.2 1.4.1 1.9-.2.5-.3 1.2-1 1.4-1.5.2-.5.2-.9.1-1.1-.1-.2-.4-.3-.8-.5l-1.7-.8c-.3-.1-.6-.2-.8.2l-.7.9c-.2.3-.4.3-.7.2-.4-.2-1.5-.6-2.3-1.4-.9-.8-1.5-1.8-1.7-2.2-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.7-1.7c-.2-.5-.5-.7-.8-.7z"
                   fill="white"/>
+
         </svg>
+
     </a>
+
+
+
+    <!-- TRI ASSISTANT -->
 
     <a href="#"
        class="ai-agent-button"
        onclick="openAIChat(); return false;"
        title="TRI Assistant">
+
         TRI Assistant
+
     </a>
+
 
 </div>
 
-<div id="aiChatBox" class="ai-chat-box">
+
+
+<!-- =====================================================
+     TRI ASSISTANT CHAT
+===================================================== -->
+
+<div id="aiChatBox"
+     class="ai-chat-box">
+
 
     <div class="ai-chat-header">
-        <span>TRI Assistant</span>
-        <button onclick="closeAIChat()">×</button>
+
+        <span>
+            TRI Assistant
+        </span>
+
+
+        <button onclick="closeAIChat()">
+            ×
+        </button>
+
     </div>
 
-    <div id="aiChatMessages" class="ai-chat-messages">
+
+
+    <div id="aiChatMessages"
+         class="ai-chat-messages">
+
+
         <div class="ai-message">
-            Hi! I'm TRI Assistant. How can I help you?
+
+            Hi! I'm TRI Assistant.
+            How can I help you?
+
         </div>
+
+
     </div>
+
+
 
     <div class="ai-chat-input">
+
+
         <input
             type="text"
             id="aiUserInput"
             placeholder="Type your message..."
         >
 
-        <button onclick="sendAIMessage()">Send</button>
+
+        <button onclick="sendAIMessage()">
+
+            Send
+
+        </button>
+
+
     </div>
+
 
 </div>
 
+
+
+<!-- =====================================================
+     SCRIPTS
+===================================================== -->
+
+<script src="script.js"></script>
+
+<script type="module"
+        src="firebase.js">
+</script>
+
+<script type="module"
+        src="ai.js">
+</script>
+
+
 </body>
+
 </html>

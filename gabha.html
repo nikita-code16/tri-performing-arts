@@ -2,173 +2,573 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>TRI - Gabha</title>
+
     <link rel="stylesheet" href="style.css">
 
     <style>
-.gabha-info-section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-}
 
-.gabha-info-card {
-    background: #faf7fc;
-    border: 1px solid #e5d9ed;
-    border-radius: 14px;
-    padding: 24px;
-    box-sizing: border-box;
-}
-</style>
+        /* =====================================================
+           GABHA PAGE - DIVYAAM STYLE
+        ===================================================== */
 
-    <style>
-        /* ================= GABHA INFORMATION ================= */
-
-        .gabha-info-section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 40px 50px;
-            box-sizing: border-box;
-
+        body {
             background: #ffffff;
-            border: 1px solid #e5d9ed;
-            border-radius: 18px;
-
-            box-shadow: 0 6px 22px rgba(75, 49, 91, 0.10);
         }
 
-        .gabha-info-title {
+
+        /* =====================================================
+           ORIGINAL TRI LOGO - CENTER
+        ===================================================== */
+
+        header .tri-circle-logo {
+            width: 330px !important;
+            min-width: 330px !important;
+            margin: 0 auto !important;
+            text-align: center !important;
+        }
+
+        header .tri-main {
+            display: block !important;
+            white-space: nowrap !important;
+            text-align: center !important;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 48px !important;
+            font-weight: 700;
+            line-height: 1;
+
+            color: #c9a25a !important;
+            letter-spacing: 2px;
+        }
+
+        header .tri-sub1 {
+            text-align: center !important;
+            color: #ffffff !important;
+            font-size: 11px !important;
+            font-weight: 700;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        header .tri-divider {
+            width: 90% !important;
+            margin: 8px auto 6px !important;
+
+            display: flex !important;
+            align-items: center !important;
+            gap: 7px !important;
+        }
+
+        header .tri-divider .line {
+            flex: 1;
+            height: 1px;
+            background: #c9a25a !important;
+        }
+
+        header .tri-divider .diamond {
+            width: 7px;
+            height: 7px;
+            background: #c9a25a !important;
+            transform: rotate(45deg);
+            flex-shrink: 0;
+        }
+
+        header .tri-sub2 {
+            text-align: center !important;
+            color: #e5d8eb !important;
+            font-size: 9px !important;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           GABHA HERO
+        ===================================================== */
+
+        .gabha-hero {
+            min-height: 430px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             text-align: center;
-            color: #4b315b;
-            font-size: 28px;
+
+            padding: 70px 25px;
+
+            background: linear-gradient(
+                135deg,
+                #17253f 0%,
+                #203b5d 50%,
+                #17253f 100%
+            );
+        }
+
+        .gabha-hero-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .gabha-hero-logo {
+            width: 200px;
+            height: 200px;
+
+            object-fit: contain;
+
+            display: block;
+
+            margin: 0 auto 20px;
+
+            filter: drop-shadow(
+                0 8px 15px rgba(0,0,0,0.25)
+            );
+        }
+
+        .gabha-eyebrow {
+            color: #c9a25a;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 12px;
+        }
+
+        .gabha-hero h1 {
             margin: 0 0 12px;
+
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(42px, 7vw, 68px);
         }
 
-        .gabha-info-intro {
-            max-width: 720px;
-            margin: 0 auto 30px;
+        .gabha-hero h1 span {
+            color: #c9a25a;
+        }
+
+        .gabha-hero p {
+            color: #ddd2e4;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            max-width: 700px;
+
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           COMMON SECTION
+        ===================================================== */
+
+        .gabha-section {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 70px 30px;
+        }
+
+        .gabha-section-title {
             text-align: center;
-            color: #76558b;
+
+            margin-bottom: 35px;
+        }
+
+        .gabha-section-title small {
+            color: #c9a25a;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+        }
+
+        .gabha-section-title h2 {
+            color: #3a2448;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 34px;
+
+            margin: 8px 0 0;
+        }
+
+        .gabha-section-title p {
+            max-width: 750px;
+
+            margin: 15px auto 0;
+
+            color: #675b6d;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           INTRO TEXT
+        ===================================================== */
+
+        .gabha-welcome {
+            max-width: 800px;
+
+            margin: 0 auto 35px;
+
+            text-align: center;
+
+            color: #675b6d;
+
             font-size: 16px;
-            line-height: 1.7;
+
+            line-height: 1.9;
         }
 
-        .gabha-info-grid {
+
+        /* =====================================================
+           PURPLE CARDS
+        ===================================================== */
+
+        .gabha-card-grid {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+
+            gap: 18px;
         }
 
-        .gabha-info-card {
-            background: #faf7fc;
-            border: 1px solid #e5d9ed;
-            border-radius: 14px;
-            padding: 24px;
-            box-sizing: border-box;
+        .gabha-card {
+            min-height: 190px;
+
+            padding: 28px 25px;
+
+            background: linear-gradient(
+                to bottom,
+                #aaa5b1 0%,
+                #817888 42%,
+                #33223e 100%
+            );
+
+            border: 1px solid #c9a25a;
+
+            border-radius: 0 0 12px 12px;
+
+            color: #ffffff;
 
             transition: 0.3s;
         }
 
-        .gabha-info-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(75, 49, 91, 0.12);
+        .gabha-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 28px rgba(50,30,60,0.20);
         }
 
-        .gabha-info-card h3 {
-            margin: 0 0 10px;
-            color: #4b315b;
-            font-size: 20px;
+        .gabha-card h3 {
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 22px;
+
+            margin: 0 0 12px;
         }
 
-        .gabha-info-card p {
+        .gabha-card p {
+            color: #f1edf3;
+
+            font-size: 14px;
+
+            line-height: 1.75;
+
             margin: 0;
-            color: #5f4b69;
-            font-size: 15px;
-            line-height: 1.6;
         }
 
-        @media (max-width: 700px) {
-            .gabha-info-section {
-                padding: 30px 20px;
+
+        /* =====================================================
+           ABOUT TEXT BOX
+        ===================================================== */
+
+        .gabha-text-box {
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 35px;
+
+            background: linear-gradient(
+                to bottom,
+                #aaa5b1 0%,
+                #817888 42%,
+                #33223e 100%
+            );
+
+            border: 1px solid #c9a25a;
+
+            border-radius: 0 0 12px 12px;
+
+            color: #ffffff;
+
+            box-shadow:
+                0 12px 28px rgba(50,30,60,0.20);
+        }
+
+        .gabha-text-box h3 {
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 24px;
+
+            margin: 0 0 12px;
+        }
+
+        .gabha-text-box p {
+            color: #f1edf3;
+
+            line-height: 1.8;
+
+            font-size: 15px;
+
+            margin-bottom: 22px;
+        }
+
+        .gabha-text-box p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =====================================================
+           GALLERY
+        ===================================================== */
+
+        .gallery-section {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 70px 30px;
+
+            background: #ffffff;
+        }
+
+        .gallery-title {
+            text-align: center;
+
+            color: #3a2448;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 34px;
+
+            margin: 0 0 35px;
+        }
+
+        .gallery-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+
+            border-radius: 0 0 12px 12px;
+
+            border: 1px solid #c9a25a;
+
+            background: linear-gradient(
+                to bottom,
+                #aaa5b1 0%,
+                #817888 42%,
+                #33223e 100%
+            );
+
+            box-shadow:
+                0 12px 28px rgba(50,30,60,0.20);
+
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 30px rgba(50,30,60,0.25);
+        }
+
+        .gallery-item img {
+            width: 100%;
+
+            height: 260px;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            header .tri-circle-logo {
+                width: 330px !important;
+                min-width: 330px !important;
             }
 
-            .gabha-info-grid {
+            .gabha-card-grid {
                 grid-template-columns: 1fr;
             }
 
-            .gabha-info-title {
-                font-size: 24px;
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                height: 230px;
+            }
+
+            .gabha-section {
+                padding-left: 20px;
+                padding-right: 20px;
             }
         }
+
+        @media (max-width: 500px) {
+
+            .gabha-hero-logo {
+                width: 125px;
+                height: 125px;
+            }
+
+        }
+
     </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
     <div class="tri-circle-logo">
+
         <div class="tri-main">
             T<span class="tri-r">R</span>I
         </div>
 
-        <div class="tri-sub1" data-en="SCHOOL OF PERFORMING ARTS" data-mr="परफॉर्मिंग आर्ट्स स्कूल">
+        <div class="tri-sub1"
+             data-en="SCHOOL OF PERFORMING ARTS"
+             data-mr="परफॉर्मिंग आर्ट्स स्कूल">
             SCHOOL OF PERFORMING ARTS
         </div>
 
         <div class="tri-divider">
+
             <span class="line"></span>
+
             <span class="diamond"></span>
+
             <span class="line"></span>
+
         </div>
 
-        <div class="tri-sub2" data-en="MUSIC • DANCE • THEATRE" data-mr="संगीत • नृत्य • नाट्य">
+        <div class="tri-sub2"
+             data-en="MUSIC • DANCE • THEATRE"
+             data-mr="संगीत • नृत्य • नाट्य">
             MUSIC &nbsp;•&nbsp; DANCE &nbsp;•&nbsp; THEATRE
         </div>
+
     </div>
 
+
     <nav>
+
         <ul class="navbar">
 
             <li>
+
+                <a href="index.html"
+                   data-en="Home"
+                   data-mr="मुख्यपृष्ठ">
+                    Home
+                </a>
+
+            </li>
+
+            <li>
+
                 <a href="about.html"
                    data-en="About"
                    data-mr="आमच्याबद्दल">
                     About
                 </a>
+
             </li>
 
             <li>
+
                 <a href="diviyan.html"
                    data-en="Divyaam"
                    data-mr="दिव्याम">
-                    Diviyam
+                    Divyaam
                 </a>
+
             </li>
 
             <li>
+
                 <a href="abhivyakti.html"
                    data-en="Abhivyakti"
                    data-mr="अभिव्यक्ती">
                     Abhivyakti
                 </a>
+
             </li>
 
             <li>
+
                 <a href="gabha.html"
                    class="active"
                    data-en="Gabha"
                    data-mr="गाभा">
                     Gabha
                 </a>
+
             </li>
 
+
             <li class="dropdown">
+
                 <a href="#"
                    onclick="toggleDropdown('bookingMenu'); return false;"
                    data-en="Booking ▾"
@@ -176,214 +576,444 @@
                     Booking ▾
                 </a>
 
-                <ul id="bookingMenu" class="submenu">
+                <ul id="bookingMenu"
+                    class="submenu">
+
                     <li>
+
                         <a href="booknow.html"
                            data-en="Book Now"
                            data-mr="आता बुक करा">
                             Book Now
                         </a>
+
                     </li>
+
                 </ul>
+
             </li>
 
-            <li class="dropdown">
-                <a href="#"
-                   onclick="toggleDropdown('contactMenu'); return false;"
-                   data-en="Contact ▾"
-                   data-mr="संपर्क ▾">
-                    Contact ▾
-                </a>
-
-                <ul id="contactMenu" class="submenu">
-                    <li>
-                        <a href="whatsapp.html"
-                           data-en="WhatsApp"
-                           data-mr="व्हॉट्सॲप">
-                            WhatsApp
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="email.html"
-                           data-en="Email"
-                           data-mr="ईमेल">
-                            Email
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="instagram.html"
-                           data-en="Instagram"
-                           data-mr="इन्स्टाग्राम">
-                            Instagram
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="facebook.html"
-                           data-en="Facebook"
-                           data-mr="फेसबुक">
-                            Facebook
-                        </a>
-                    </li>
-                </ul>
-            </li>
 
             <li>
+
+                <a href="contact.html"
+                   data-en="Contact"
+                   data-mr="संपर्क">
+                    Contact
+                </a>
+
+            </li>
+
+
+            <li>
+
                 <button id="languageBtn"
                         class="language-btn"
                         onclick="toggleLanguage()">
                     मराठी
                 </button>
+
             </li>
 
         </ul>
+
     </nav>
 
 </header>
 
+
+
 <main>
 
-    <section id="gabha" class="content-section">
+
+<!-- =====================================================
+     GABHA HERO
+===================================================== -->
+
+<section class="gabha-hero">
+
+    <div class="gabha-hero-content">
 
         <img src="gabha-logo.png"
              alt="Gabha Logo"
-             style="width:110px; height:auto; display:block; margin:0 auto 15px;">
+             class="gabha-hero-logo">
 
-        <h2 data-en="GABHA"
-            data-mr="गाभा">
-            GABHA
+
+        <div class="gabha-eyebrow"
+             data-en="SEMI-CLASSICAL • BOLLYWOOD • EXPRESSION"
+             data-mr="सेमी-क्लासिकल • बॉलीवूड • अभिव्यक्ती">
+            SEMI-CLASSICAL • BOLLYWOOD • EXPRESSION
+        </div>
+
+
+        <h1>
+            <span>GABHA</span>
+        </h1>
+
+
+        <p
+            data-en="School of Semi-Classical & Bollywood Dance"
+            data-mr="सेमी-क्लासिकल आणि बॉलीवूड डान्स स्कूल">
+            School of Semi-Classical & Bollywood Dance
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WELCOME / ABOUT GABHA
+===================================================== -->
+
+<section class="gabha-section">
+
+    <div class="gabha-section-title">
+
+        <small
+            data-en="WELCOME TO GABHA"
+            data-mr="गाभामध्ये आपले स्वागत आहे">
+            WELCOME TO GABHA
+        </small>
+
+        <h2
+            data-en="Dance • Expression • Creativity"
+            data-mr="नृत्य • अभिव्यक्ती • सर्जनशीलता">
+            Dance • Expression • Creativity
         </h2>
 
-        <p data-en="School of Semi-Classical & Bollywood Dance"
-   data-mr="सेमी-क्लासिकल आणि बॉलीवूड डान्स स्कूल"
-   style="text-align: center;">
-    School of Semi-Classical & Bollywood Dance
-</p>
-
-    </section>
+    </div>
 
 
-    <!-- ================= GABHA INFORMATION ================= -->
+    <p class="gabha-welcome"
+       data-en="GABHA is a dance learning space that combines semi-classical grace with the energy and creativity of Bollywood dance."
+       data-mr="गाभा हे असे नृत्य शिक्षणाचे व्यासपीठ आहे जे सेमी-क्लासिकल नृत्याची सुंदरता आणि बॉलीवूड नृत्याची ऊर्जा व सर्जनशीलता एकत्र आणते.">
+        GABHA is a dance learning space that combines semi-classical grace
+        with the energy and creativity of Bollywood dance.
+    </p>
 
-    <section class="gabha-info-section">
 
-        <h2 class="gabha-info-title"
+    <div class="gabha-card-grid">
+
+
+        <div class="gabha-card">
+
+            <h3
+                data-en="Our Approach"
+                data-mr="आमची पद्धत">
+                Our Approach
+            </h3>
+
+            <p
+                data-en="GABHA focuses on practical dance learning through regular practice, rhythm, movement and performance."
+                data-mr="गाभामध्ये नियमित सराव, ताल, हालचाल आणि सादरीकरणाच्या माध्यमातून प्रात्यक्षिक नृत्य शिक्षणावर भर दिला जातो.">
+                GABHA focuses on practical dance learning through regular
+                practice, rhythm, movement and performance.
+            </p>
+
+        </div>
+
+
+        <div class="gabha-card">
+
+            <h3
+                data-en="Semi-Classical Dance"
+                data-mr="सेमी-क्लासिकल नृत्य">
+                Semi-Classical Dance
+            </h3>
+
+            <p
+                data-en="Students learn graceful movements, expressions, rhythm and basic classical elements in a simple and engaging way."
+                data-mr="विद्यार्थी सुंदर हालचाली, भाव, ताल आणि शास्त्रीय नृत्याचे मूलभूत घटक सोप्या आणि आनंददायी पद्धतीने शिकतात.">
+                Students learn graceful movements, expressions, rhythm and
+                basic classical elements in a simple and engaging way.
+            </p>
+
+        </div>
+
+
+        <div class="gabha-card">
+
+            <h3
+                data-en="Bollywood Dance"
+                data-mr="बॉलीवूड नृत्य">
+                Bollywood Dance
+            </h3>
+
+            <p
+                data-en="Bollywood dance brings energetic choreography, expressions, coordination and fun into the learning experience."
+                data-mr="बॉलीवूड नृत्यामध्ये उत्साही कोरिओग्राफी, भाव, शरीर समन्वय आणि आनंददायी शिकण्याचा अनुभव दिला जातो.">
+                Bollywood dance brings energetic choreography, expressions,
+                coordination and fun into the learning experience.
+            </p>
+
+        </div>
+
+
+        <div class="gabha-card">
+
+            <h3
+                data-en="Confidence & Expression"
+                data-mr="आत्मविश्वास आणि अभिव्यक्ती">
+                Confidence & Expression
+            </h3>
+
+            <p
+                data-en="Dance helps students build confidence, improve stage presence and express themselves comfortably through movement."
+                data-mr="नृत्यामुळे विद्यार्थ्यांचा आत्मविश्वास वाढतो, स्टेजवरील सादरीकरण सुधारते आणि हालचालींद्वारे स्वतःची अभिव्यक्ती करण्यास मदत होते.">
+                Dance helps students build confidence, improve stage presence
+                and express themselves comfortably through movement.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT GABHA
+===================================================== -->
+
+<section class="gabha-section">
+
+    <div class="gabha-section-title">
+
+        <small
+            data-en="ABOUT"
+            data-mr="आमच्याबद्दल">
+            ABOUT
+        </small>
+
+        <h2
             data-en="About GABHA"
             data-mr="गाभा बद्दल">
             About GABHA
         </h2>
 
-        <p class="gabha-info-intro"
-           data-en="GABHA is a dance learning space that combines semi-classical grace with the energy and creativity of Bollywood dance."
-           data-mr="गाभा हे असे नृत्य शिक्षणाचे व्यासपीठ आहे जे सेमी-क्लासिकल नृत्याची सुंदरता आणि बॉलीवूड नृत्याची ऊर्जा व सर्जनशीलता एकत्र आणते.">
-            GABHA is a dance learning space that combines semi-classical grace
-            with the energy and creativity of Bollywood dance.
+    </div>
+
+
+    <div class="gabha-text-box">
+
+        <h3
+            data-en="About GABHA"
+            data-mr="गाभा बद्दल">
+            About GABHA
+        </h3>
+
+        <p
+            data-en="GABHA is a dance learning space that combines semi-classical grace with the energy and creativity of Bollywood dance."
+            data-mr="गाभा हे असे नृत्य शिक्षणाचे व्यासपीठ आहे जे सेमी-क्लासिकल नृत्याची सुंदरता आणि बॉलीवूड नृत्याची ऊर्जा व सर्जनशीलता एकत्र आणते.">
+            GABHA is a dance learning space that combines
+            semi-classical grace with the energy and creativity
+            of Bollywood dance.
         </p>
 
 
-        <div class="gabha-info-grid">
+        <h3
+            data-en="Learning Experience"
+            data-mr="शिकण्याचा अनुभव">
+            Learning Experience
+        </h3>
+
+        <p
+            data-en="GABHA encourages discipline, creativity and regular practice while creating a positive environment for students."
+            data-mr="गाभा विद्यार्थ्यांसाठी सकारात्मक वातावरण तयार करताना शिस्त, सर्जनशीलता आणि नियमित सरावाला प्रोत्साहन देतो.">
+            GABHA encourages discipline, creativity and regular practice
+            while creating a positive environment for students.
+        </p>
+
+    </div>
+
+</section>
 
 
-            <div class="gabha-info-card">
 
-                <h3 data-en="Our Approach"
-                    data-mr="आमची पद्धत">
-                    Our Approach
-                </h3>
+<!-- =====================================================
+     GABHA FOCUS
+===================================================== -->
 
-                <p data-en="GABHA focuses on practical dance learning through regular practice, rhythm, movement and performance."
-                   data-mr="गाभामध्ये नियमित सराव, ताल, हालचाल आणि सादरीकरणाच्या माध्यमातून प्रात्यक्षिक नृत्य शिक्षणावर भर दिला जातो.">
-                    GABHA focuses on practical dance learning through regular
-                    practice, rhythm, movement and performance.
-                </p>
+<section class="gabha-section">
 
-            </div>
+    <div class="gabha-section-title">
 
+        <small
+            data-en="OUR FOCUS"
+            data-mr="आमचे लक्ष">
+            OUR FOCUS
+        </small>
 
-            <div class="gabha-info-card">
+        <h2
+            data-en="What Students Learn"
+            data-mr="विद्यार्थी काय शिकतात">
+            What Students Learn
+        </h2>
 
-                <h3 data-en="Semi-Classical Dance"
-                    data-mr="सेमी-क्लासिकल नृत्य">
-                    Semi-Classical Dance
-                </h3>
-
-                <p data-en="Students learn graceful movements, expressions, rhythm and basic classical elements in a simple and engaging way."
-                   data-mr="विद्यार्थी सुंदर हालचाली, भाव, ताल आणि शास्त्रीय नृत्याचे मूलभूत घटक सोप्या आणि आनंददायी पद्धतीने शिकतात.">
-                    Students learn graceful movements, expressions, rhythm and
-                    basic classical elements in a simple and engaging way.
-                </p>
-
-            </div>
+    </div>
 
 
-            <div class="gabha-info-card">
-
-                <h3 data-en="Bollywood Dance"
-                    data-mr="बॉलीवूड नृत्य">
-                    Bollywood Dance
-                </h3>
-
-                <p data-en="Bollywood dance brings energetic choreography, expressions, coordination and fun into the learning experience."
-                   data-mr="बॉलीवूड नृत्यामध्ये उत्साही कोरिओग्राफी, भाव, शरीर समन्वय आणि आनंददायी शिकण्याचा अनुभव दिला जातो.">
-                    Bollywood dance brings energetic choreography, expressions,
-                    coordination and fun into the learning experience.
-                </p>
-
-            </div>
+    <div class="gabha-card-grid">
 
 
-            <div class="gabha-info-card">
+        <div class="gabha-card">
 
-                <h3 data-en="Confidence & Expression"
-                    data-mr="आत्मविश्वास आणि अभिव्यक्ती">
-                    Confidence & Expression
-                </h3>
+            <h3
+                data-en="Semi-Classical Dance"
+                data-mr="सेमी-क्लासिकल नृत्य">
+                Semi-Classical Dance
+            </h3>
 
-                <p data-en="Dance helps students build confidence, improve stage presence and express themselves comfortably through movement."
-                   data-mr="नृत्यामुळे विद्यार्थ्यांचा आत्मविश्वास वाढतो, स्टेजवरील सादरीकरण सुधारते आणि हालचालींद्वारे स्वतःची अभिव्यक्ती करण्यास मदत होते.">
-                    Dance helps students build confidence, improve stage presence
-                    and express themselves comfortably through movement.
-                </p>
-
-            </div>
-
-
-            <div class="gabha-info-card">
-
-                <h3 data-en="Learning Experience"
-                    data-mr="शिकण्याचा अनुभव">
-                    Learning Experience
-                </h3>
-
-                <p data-en="GABHA encourages discipline, creativity and regular practice while creating a positive environment for students."
-                   data-mr="गाभा विद्यार्थ्यांसाठी सकारात्मक वातावरण तयार करताना शिस्त, सर्जनशीलता आणि नियमित सरावाला प्रोत्साहन देतो.">
-                    GABHA encourages discipline, creativity and regular practice
-                    while creating a positive environment for students.
-                </p>
-
-            </div>
-
+            <p
+                data-en="Students learn graceful movements, expressions, rhythm and basic classical elements in a simple and engaging way."
+                data-mr="विद्यार्थी सुंदर हालचाली, भाव, ताल आणि शास्त्रीय नृत्याचे मूलभूत घटक सोप्या आणि आनंददायी पद्धतीने शिकतात.">
+                Students learn graceful movements, expressions, rhythm and
+                basic classical elements in a simple and engaging way.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="gabha-card">
+
+            <h3
+                data-en="Bollywood Dance"
+                data-mr="बॉलीवूड नृत्य">
+                Bollywood Dance
+            </h3>
+
+            <p
+                data-en="Bollywood dance brings energetic choreography, expressions, coordination and fun into the learning experience."
+                data-mr="बॉलीवूड नृत्यामध्ये उत्साही कोरिओग्राफी, भाव, शरीर समन्वय आणि आनंददायी शिकण्याचा अनुभव दिला जातो.">
+                Bollywood dance brings energetic choreography, expressions,
+                coordination and fun into the learning experience.
+            </p>
+
+        </div>
+
+
+        <div class="gabha-card">
+
+            <h3
+                data-en="Confidence & Expression"
+                data-mr="आत्मविश्वास आणि अभिव्यक्ती">
+                Confidence & Expression
+            </h3>
+
+            <p
+                data-en="Dance helps students build confidence, improve stage presence and express themselves comfortably through movement."
+                data-mr="नृत्यामुळे विद्यार्थ्यांचा आत्मविश्वास वाढतो, स्टेजवरील सादरीकरण सुधारते आणि हालचालींद्वारे स्वतःची अभिव्यक्ती करण्यास मदत होते.">
+                Dance helps students build confidence, improve stage presence
+                and express themselves comfortably through movement.
+            </p>
+
+        </div>
+
+
+        <div class="gabha-card">
+
+            <h3
+                data-en="Learning Experience"
+                data-mr="शिकण्याचा अनुभव">
+                Learning Experience
+            </h3>
+
+            <p
+                data-en="GABHA encourages discipline, creativity and regular practice while creating a positive environment for students."
+                data-mr="गाभा विद्यार्थ्यांसाठी सकारात्मक वातावरण तयार करताना शिस्त, सर्जनशीलता आणि नियमित सरावाला प्रोत्साहन देतो.">
+                GABHA encourages discipline, creativity and regular practice
+                while creating a positive environment for students.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GABHA GALLERY
+===================================================== -->
+
+<section class="gallery-section">
+
+    <h2 class="gallery-title"
+        data-en="GABHA Gallery"
+        data-mr="गाभा गॅलरी">
+        GABHA Gallery
+    </h2>
+
+
+    <div class="gallery-grid">
+
+
+        <div class="gallery-item">
+
+            <img src="gallery/gabha1.png"
+                 alt="GABHA Dance Performance">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="gallery/gabha2.png"
+                 alt="GABHA Semi-Classical Dance">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="gallery/gabha3.png"
+                 alt="GABHA Bollywood Dance">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="gallery/gabha4.png"
+                 alt="GABHA Dance Class">
+
+        </div>
+
+
+    </div>
+
+</section>
+
 
 </main>
 
 
+
+<!-- =====================================================
+     EXISTING SOCIAL BAR
+===================================================== -->
+
 <div class="social-bar">
+
 
     <a href="https://www.facebook.com/"
        target="_blank"
        class="facebook-icon">
 
         <svg viewBox="0 0 24 24">
+
             <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1z"/>
+
         </svg>
 
     </a>
+
 
 
     <a href="https://www.instagram.com/tri_performing_arts/"
@@ -391,12 +1021,15 @@
        class="instagram-icon">
 
         <svg viewBox="0 0 24 24">
+
             <rect x="3" y="3" width="18" height="18" rx="5"/>
             <circle cx="12" cy="12" r="4"/>
             <circle cx="17.5" cy="6.5" r="1"/>
+
         </svg>
 
     </a>
+
 
 
     <a href="https://www.youtube.com/"
@@ -404,14 +1037,16 @@
        class="youtube-icon">
 
         <svg viewBox="0 0 24 24">
+
             <rect x="2" y="5" width="20" height="14" rx="4"/>
             <polygon points="10,8 17,12 10,16"/>
+
         </svg>
 
     </a>
 
 
-    <a href="https://wa.me/919356769743"
+    <a href="https://wa.me/919890654588?text=Hello%2C%20I%20am%20interested%20in%20TRI%20School%20of%20Performing%20Arts."
        target="_blank"
        class="whatsapp-icon">
 
@@ -422,12 +1057,14 @@
                   stroke="white"
                   stroke-width="2"/>
 
-            <path d="M11.5 9.8c-.4 0-.8.2-1 .6-.3.5-.8 1.6-.8 2.4 0 .4.2 1 .5 1.6.4.8 1 1.7 1.8 2.5 1.4 1.5 3.3 2.6 5.1 3.2.7.2 1.3.1 1.8-.2.5-.3 1.1-.9 1.3-1.4.2-.5.2-.8.1-1-.1-.2-.4-.3-.8-.5l-1.7-.8c-.3-.1-.6-.2-.8.2l-.7.9c-.2.3-.4.3-.7.2-.4-.2-1.5-.6-2.3-1.4-.9-.8-1.5-1.8-1.7-2.2-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.7-1.7c-.2-.5-.5-.7-.8-.7z"
+
+            <path d="M11.5 9.8c-.4 0-.8.2-1 .6-.3.5-.8 1.6-.8 2.4 0 1.3.9 3.1 2.3 4.7 1.4 1.7 3.4 3.1 5.3 3.7.7.2 1.4.1 1.9-.2.5-.3 1.2-1 1.4-1.5.2-.5.2-.9.1-1.1-.1-.2-.4-.3-.8-.5l-1.7-.8c-.3-.1-.6-.2-.8.2l-.7.9c-.2.3-.4.3-.7.2-.4-.2-1.5-.6-2.3-1.4-.9-.8-1.5-1.8-1.7-2.2-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.7-1.7c-.2-.5-.5-.7-.8-.7z"
                   fill="white"/>
 
         </svg>
 
     </a>
+
 
 
     <a href="#"
@@ -439,26 +1076,35 @@
 
     </a>
 
+
 </div>
 
 
-<script src="script.js"></script>
-<script type="module" src="firebase.js"></script>
-<script type="module" src="ai.js"></script>
 
+<!-- =====================================================
+     AI CHAT
+===================================================== -->
 
-<div id="aiChatBox" class="ai-chat-box">
+<div id="aiChatBox"
+     class="ai-chat-box">
+
 
     <div class="ai-chat-header">
 
-        <span>TRI Assistant</span>
+        <span>
+            TRI Assistant
+        </span>
 
-        <button onclick="closeAIChat()">×</button>
+
+        <button onclick="closeAIChat()">
+            ×
+        </button>
 
     </div>
 
 
-    <div id="aiChatMessages" class="ai-chat-messages">
+    <div id="aiChatMessages"
+         class="ai-chat-messages">
 
         <div class="ai-message">
             Hi! I'm TRI Assistant. How can I help you?
@@ -475,13 +1121,25 @@
             placeholder="Type your message..."
         >
 
+
         <button onclick="sendAIMessage()">
             Send
         </button>
 
     </div>
 
+
 </div>
+
+
+
+<!-- =====================================================
+     SCRIPTS
+===================================================== -->
+
+<script src="script.js"></script>
+<script type="module" src="firebase.js"></script>
+<script type="module" src="ai.js"></script>
 
 
 </body>

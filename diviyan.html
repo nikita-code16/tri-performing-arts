@@ -2,534 +2,2096 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRI - Diviyam</title>
+
+    <title>TRI - Divyaam</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           DIVYAAM PAGE - HOME + ABOUT MATCHING UI
+        ===================================================== */
+
+        body {
+            background: #ffffff;
+        }
+
+        /* =====================================================
+           ORIGINAL TRI LOGO - CENTER
+        ===================================================== */
+
+        header .tri-circle-logo {
+            width: 330px !important;
+            min-width: 330px !important;
+            margin: 0 auto !important;
+            text-align: center !important;
+        }
+
+        header .tri-main {
+            display: block !important;
+            white-space: nowrap !important;
+            text-align: center !important;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 48px !important;
+            font-weight: 700;
+            line-height: 1;
+
+            color: #c9a25a !important;
+            letter-spacing: 2px;
+        }
+
+        header .tri-sub1 {
+            text-align: center !important;
+            color: #ffffff !important;
+            font-size: 11px !important;
+            font-weight: 700;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        header .tri-divider {
+            width: 90% !important;
+            margin: 8px auto 6px !important;
+
+            display: flex !important;
+            align-items: center !important;
+            gap: 7px !important;
+        }
+
+        header .tri-divider .line {
+            flex: 1;
+            height: 1px;
+            background: #c9a25a !important;
+        }
+
+        header .tri-divider .diamond {
+            width: 7px;
+            height: 7px;
+            background: #c9a25a !important;
+            transform: rotate(45deg);
+            flex-shrink: 0;
+        }
+
+        header .tri-sub2 {
+            text-align: center !important;
+            color: #e5d8eb !important;
+            font-size: 9px !important;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           DIVYAAM HERO
+        ===================================================== */
+
+        .divyaam-hero {
+            min-height: 430px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 70px 25px;
+
+            background: linear-gradient(
+                135deg,
+                #17253f 0%,
+                #203b5d 50%,
+                #17253f 100%
+            );
+        }
+
+        .divyaam-hero-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .divyaam-hero-logo {
+            width: 150px;
+            height: 150px;
+
+            object-fit: contain;
+
+            display: block;
+
+            margin: 0 auto 20px;
+
+            filter: drop-shadow(
+                0 8px 15px rgba(0,0,0,0.25)
+            );
+        }
+
+        .divyaam-eyebrow {
+            color: #c9a25a;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 12px;
+        }
+
+        .divyaam-hero h1 {
+            margin: 0 0 12px;
+
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(42px, 7vw, 68px);
+        }
+
+        .divyaam-hero h1 span {
+            color: #c9a25a;
+        }
+
+        .divyaam-hero p {
+            color: #ddd2e4;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            max-width: 700px;
+
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           COMMON SECTION
+        ===================================================== */
+
+        .divyaam-section {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 70px 30px;
+        }
+
+        .divyaam-section-title {
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+        .divyaam-section-title small {
+            color: #c9a25a;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+        }
+
+        .divyaam-section-title h2 {
+            color: #3a2448;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 34px;
+
+            margin: 8px 0 0;
+        }
+
+        .divyaam-section-title p {
+            max-width: 750px;
+
+            margin: 15px auto 0;
+
+            color: #675b6d;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           WELCOME
+        ===================================================== */
+
+        .divyaam-welcome {
+            max-width: 800px;
+
+            margin: 0 auto 35px;
+
+            text-align: center;
+
+            color: #675b6d;
+
+            font-size: 16px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =====================================================
+           PURPLE CARDS
+        ===================================================== */
+
+        .divyaam-card-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .divyaam-card {
+            min-height: 190px;
+
+            padding: 28px 25px;
+
+            background: linear-gradient(
+                to bottom,
+                #aaa5b1 0%,
+                #817888 42%,
+                #33223e 100%
+            );
+
+            border: 1px solid #c9a25a;
+
+            border-radius: 0 0 12px 12px;
+
+            color: #ffffff;
+
+            transition: 0.3s;
+        }
+
+        .divyaam-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 28px rgba(50,30,60,0.20);
+        }
+
+        .divyaam-card h3 {
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 22px;
+
+            margin: 0 0 12px;
+        }
+
+        .divyaam-card p {
+            color: #f1edf3;
+
+            font-size: 14px;
+
+            line-height: 1.75;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           ABOUT TEXT
+        ===================================================== */
+
+        .divyaam-text-box {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: linear-gradient(
+        to bottom,
+        #aaa5b1 0%,
+        #817888 42%,
+        #33223e 100%
+    );
+
+    border: 1px solid #c9a25a;
+
+    border-radius: 0 0 12px 12px;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 12px 28px rgba(50,30,60,0.20);
+}
+
+.divyaam-text-box h3 {
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    margin: 0 0 12px;
+}
+
+.divyaam-text-box p {
+    color: #f1edf3;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+
+    margin-bottom: 22px;
+}
+
+.divyaam-text-box p:last-child {
+    margin-bottom: 0;
+}
+
+        /* =====================================================
+           PHILOSOPHY
+        ===================================================== */
+
+        .divyaam-philosophy {
+            background: #ffffff;
+        }
+
+        .divyaam-philosophy-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+
+        /* =====================================================
+           JOURNEY
+        ===================================================== */
+
+        .divyaam-journey {
+            max-width: 900px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .divyaam-year {
+            padding: 25px 20px;
+
+            text-align: center;
+
+            background: linear-gradient(
+                to bottom,
+                #aaa5b1 0%,
+                #817888 42%,
+                #33223e 100%
+            );
+
+            border: 1px solid #c9a25a;
+
+            border-radius: 0 0 12px 12px;
+
+            color: #ffffff;
+        }
+
+        .divyaam-year strong {
+            display: block;
+
+            color: #e0c274;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        .divyaam-year p {
+            color: #f1edf3;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           GURU
+        ===================================================== */
+
+        .divyaam-guru-box {
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 35px;
+
+            background: linear-gradient(
+                to bottom,
+                #aaa5b1 0%,
+                #817888 42%,
+                #33223e 100%
+            );
+
+            border: 1px solid #c9a25a;
+
+            border-radius: 0 0 12px 12px;
+
+            color: #ffffff;
+        }
+
+        .divyaam-guru-box h2 {
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            margin-top: 0;
+        }
+
+        .divyaam-guru-box h3 {
+            color: #e0c274;
+
+            font-size: 17px;
+        }
+
+        .divyaam-guru-box p,
+        .divyaam-guru-box li {
+            color: #f1edf3;
+
+            line-height: 1.75;
+
+            font-size: 14px;
+        }
+
+        .divyaam-guru-box ul {
+            padding-left: 20px;
+        }
+
+        .divyaam-quote {
+            margin-top: 25px;
+
+            padding: 20px;
+
+            border-left: 3px solid #c9a25a;
+
+            background: rgba(255,255,255,0.08);
+
+            color: #ffffff;
+
+            font-style: italic;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           FAQ
+        ===================================================== */
+
+        .divyaam-faq {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+      .divyaam-faq-item {
+    padding: 25px;
+
+    background: linear-gradient(
+        to bottom,
+        #aaa5b1 0%,
+        #817888 42%,
+        #33223e 100%
+    );
+
+    border: 1px solid #c9a25a;
+
+    border-radius: 0 0 12px 12px;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 12px 28px rgba(50,30,60,0.20);
+
+    transition: 0.3s;
+}
+
+.divyaam-faq-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(50,30,60,0.25);
+}
+
+.divyaam-faq-item h3 {
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 19px;
+
+    margin: 0 0 10px;
+}
+
+.divyaam-faq-item p {
+    color: #f1edf3;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+        /* =====================================================
+           GALLERY
+        ===================================================== */
+
+        .gallery-section {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 70px 30px;
+
+            background: #ffffff;
+        }
+
+        .gallery-title {
+            text-align: center;
+
+            color: #3a2448;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 34px;
+
+            margin: 0 0 35px;
+        }
+
+        .gallery-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .gallery-item {
+    overflow: hidden;
+
+    border-radius: 0 0 12px 12px;
+
+    border: 1px solid #c9a25a;
+
+    background: linear-gradient(
+        to bottom,
+        #aaa5b1 0%,
+        #817888 42%,
+        #33223e 100%
+    );
+
+    box-shadow:
+        0 12px 28px rgba(50,30,60,0.20);
+
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(50,30,60,0.25);
+}
+
+.gallery-item img {
+    width: 100%;
+
+    height: 260px;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+        /* =====================================================
+           BOTTOM CTA
+        ===================================================== */
+
+        .divyaam-cta {
+            padding: 75px 25px;
+
+            text-align: center;
+
+            background: linear-gradient(
+                135deg,
+                #17253f 0%,
+                #203b5d 50%,
+                #17253f 100%
+            );
+
+            border-top: 2px solid #c9a25a;
+        }
+
+        .divyaam-cta small {
+            color: #c9a25a;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+        }
+
+        .divyaam-cta h2 {
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 38px;
+
+            margin: 12px 0;
+        }
+
+        .divyaam-cta p {
+            color: #ddd2e4;
+
+            max-width: 650px;
+
+            margin: 0 auto 25px;
+
+            line-height: 1.7;
+        }
+
+        .divyaam-btn {
+            display: inline-block;
+
+            padding: 12px 24px;
+
+            background: #c9a25a;
+
+            color: #21152f;
+
+            border-radius: 6px;
+
+            font-weight: 700;
+
+            transition: 0.25s;
+        }
+
+        .divyaam-btn:hover {
+            transform: translateY(-3px);
+
+            color: #21152f;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            header .tri-circle-logo {
+                width: 330px !important;
+                min-width: 330px !important;
+            }
+
+            .divyaam-card-grid,
+            .divyaam-philosophy-grid,
+            .divyaam-faq {
+                grid-template-columns: 1fr;
+            }
+
+            .divyaam-journey {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                height: 230px;
+            }
+
+            .divyaam-section {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .divyaam-cta h2 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .divyaam-journey {
+                grid-template-columns: 1fr;
+            }
+
+            .divyaam-hero-logo {
+                width: 125px;
+                height: 125px;
+            }
+        }
+
+    </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
     <div class="tri-circle-logo">
+
         <div class="tri-main">
             T<span class="tri-r">R</span>I
         </div>
 
-        <div class="tri-sub1" data-en="SCHOOL OF PERFORMING ARTS" data-mr="परफॉर्मिंग आर्ट्स स्कूल">
+        <div class="tri-sub1"
+             data-en="SCHOOL OF PERFORMING ARTS"
+             data-mr="परफॉर्मिंग आर्ट्स स्कूल">
             SCHOOL OF PERFORMING ARTS
         </div>
 
         <div class="tri-divider">
+
             <span class="line"></span>
+
             <span class="diamond"></span>
+
             <span class="line"></span>
+
         </div>
 
-        <div class="tri-sub2" data-en="MUSIC • DANCE • THEATRE" data-mr="संगीत • नृत्य • नाट्य">
+        <div class="tri-sub2"
+             data-en="MUSIC • DANCE • THEATRE"
+             data-mr="संगीत • नृत्य • नाट्य">
             MUSIC &nbsp;•&nbsp; DANCE &nbsp;•&nbsp; THEATRE
         </div>
+
     </div>
 
+
     <nav>
+
         <ul class="navbar">
 
-            <li><a href="about.html" data-en="About" data-mr="आमच्याबद्दल">About</a></li>
+            <li>
 
-            <li><a href="diviyan.html" class="active"
-                   data-en="Diviyan" data-mr="दिवियन">Diviyam</a></li>
-
-            <li><a href="abhivyakti.html"
-                   data-en="Abhivyakti" data-mr="अभिव्यक्ती">Abhivyakti</a></li>
-
-            <li><a href="gabha.html"
-                   data-en="Gabha" data-mr="गाभा">Gabha</a></li>
-
-            <li class="dropdown">
-                <a href="#" onclick="toggleDropdown('bookingMenu'); return false;"
-                   data-en="Booking ▾" data-mr="बुकिंग ▾">
-                    Booking ▾
+                <a href="index.html"
+                   data-en="Home"
+                   data-mr="मुख्यपृष्ठ">
+                    Home
                 </a>
 
-                <ul id="bookingMenu" class="submenu">
-                    <li>
-                        <a href="booknow.html"
-                           data-en="Book Now" data-mr="आता बुक करा">
-                            Book Now
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a href="#" onclick="toggleDropdown('contactMenu'); return false;"
-                   data-en="Contact ▾" data-mr="संपर्क ▾">
-                    Contact ▾
-                </a>
-
-                <ul id="contactMenu" class="submenu">
-                    <li><a href="whatsapp.html" data-en="WhatsApp" data-mr="व्हॉट्सॲप">WhatsApp</a></li>
-                    <li><a href="email.html" data-en="Email" data-mr="ईमेल">Email</a></li>
-                    <li><a href="instagram.html" data-en="Instagram" data-mr="इन्स्टाग्राम">Instagram</a></li>
-                    <li><a href="facebook.html" data-en="Facebook" data-mr="फेसबुक">Facebook</a></li>
-                </ul>
             </li>
 
             <li>
+
+                <a href="about.html"
+                   data-en="About"
+                   data-mr="आमच्याबद्दल">
+                    About
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="diviyan.html"
+                   class="active"
+                   data-en="Divyaam"
+                   data-mr="दिव्याम">
+                    Divyaam
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="abhivyakti.html"
+                   data-en="Abhivyakti"
+                   data-mr="अभिव्यक्ती">
+                    Abhivyakti
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="gabha.html"
+                   data-en="Gabha"
+                   data-mr="गाभा">
+                    Gabha
+                </a>
+
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="#"
+                   onclick="toggleDropdown('bookingMenu'); return false;"
+                   data-en="Booking ▾"
+                   data-mr="बुकिंग ▾">
+                    Booking ▾
+                </a>
+
+                <ul id="bookingMenu"
+                    class="submenu">
+
+                    <li>
+
+                        <a href="booknow.html"
+                           data-en="Book Now"
+                           data-mr="आता बुक करा">
+                            Book Now
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+
+                <a href="contact.html"
+                   data-en="Contact"
+                   data-mr="संपर्क">
+                    Contact
+                </a>
+
+            </li>
+
+
+            <li>
+
                 <button id="languageBtn"
                         class="language-btn"
                         onclick="toggleLanguage()">
                     मराठी
                 </button>
+
             </li>
 
         </ul>
+
     </nav>
 
 </header>
 
+
+
 <main>
 
-    <!-- DIVIYAN INTRO -->
 
-    <section id="diviyan" class="diviyan-box diviyan-intro">
+<!-- =====================================================
+     DIVYAAM HERO
+===================================================== -->
+
+<section class="divyaam-hero">
+
+    <div class="divyaam-hero-content">
 
         <img src="diviyan-logo.png"
-             alt="Diviyan School of Kathak Logo"
-             class="diviyan-main-logo">
+             alt="Divyaam Kathak Academy"
+             class="divyaam-hero-logo">
 
-        <h2>Divyaam Kathak Academy</h2>
+        <div class="divyaam-eyebrow"
+             data-en="KATHAK • RHYTHM • EXPRESSION"
+             data-mr="कथक • ताल • अभिव्यक्ती">
+            KATHAK • RHYTHM • EXPRESSION
+        </div>
 
-        <p class="diviyan-tagline">
-            Rhythm • Expression • Tradition
+        <h1>
+            <span>Divyaam</span> Kathak Academy
+        </h1>
+
+        <p
+            data-en="Discover the beauty of Kathak through rhythm, expression, discipline and creativity."
+            data-mr="ताल, अभिव्यक्ती, शिस्त आणि सर्जनशीलतेच्या माध्यमातून कथकच्या सौंदर्याचा अनुभव घ्या.">
+            Discover the beauty of Kathak through rhythm,
+            expression, discipline and creativity.
         </p>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- WELCOME -->
 
-    <section class="diviyan-box">
+<!-- =====================================================
+     WELCOME
+===================================================== -->
 
-        <div class="diviyan-section-title">
+<section class="divyaam-section">
+
+    <div class="divyaam-section-title">
+
+        <small
+            data-en="WELCOME TO DIVYAAM"
+            data-mr="दिव्याममध्ये आपले स्वागत आहे">
             WELCOME TO DIVYAAM
-        </div>
+        </small>
 
-        <p class="diviyan-welcome">
-            Discover the beauty of Kathak through rhythm, expression,
-            discipline and creativity.
-        </p>
+        <h2
+            data-en="Rhythm • Expression • Tradition"
+            data-mr="ताल • अभिव्यक्ती • परंपरा">
+            Rhythm • Expression • Tradition
+        </h2>
 
-        <div class="diviyan-card-grid">
+    </div>
 
-            <div class="diviyan-card">
-                <h3>Children Classes</h3>
-                <p>
-                    A welcoming environment where children can learn Kathak
-                    and develop confidence, discipline and creativity.
-                </p>
-            </div>
 
-            <div class="diviyan-card">
-                <h3>Adult Classes</h3>
-                <p>
-                    Learn Kathak while connecting with Indian classical
-                    dance traditions.
-                </p>
-            </div>
+    <p class="divyaam-welcome"
+       data-en="Discover the beauty of Kathak through rhythm, expression, discipline and creativity."
+       data-mr="ताल, अभिव्यक्ती, शिस्त आणि सर्जनशीलतेच्या माध्यमातून कथकच्या सौंदर्याचा अनुभव घ्या.">
+        Discover the beauty of Kathak through rhythm,
+        expression, discipline and creativity.
+    </p>
 
-            <div class="diviyan-card">
-                <h3>Traditional Kathak</h3>
-                <p>
-                    Learn Tatkar, Chakkars, Taal, Laya, Abhinaya
-                    and traditional compositions.
-                </p>
-            </div>
 
-            <div class="diviyan-card">
-                <h3>Performance Opportunities</h3>
-                <p>
-                    Students can develop stage confidence through
-                    performance opportunities.
-                </p>
-            </div>
+    <div class="divyaam-card-grid">
+
+
+        <div class="divyaam-card">
+
+            <h3
+                data-en="Children Classes"
+                data-mr="मुलांचे वर्ग">
+                Children Classes
+            </h3>
+
+            <p
+                data-en="A welcoming environment where children can learn Kathak and develop confidence, discipline and creativity."
+                data-mr="मुलांना कथक शिकता यावे आणि आत्मविश्वास, शिस्त व सर्जनशीलता विकसित करता यावी यासाठी स्वागतार्ह वातावरण.">
+                A welcoming environment where children can learn Kathak
+                and develop confidence, discipline and creativity.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="divyaam-card">
+
+            <h3
+                data-en="Adult Classes"
+                data-mr="प्रौढांचे वर्ग">
+                Adult Classes
+            </h3>
+
+            <p
+                data-en="Learn Kathak while connecting with Indian classical dance traditions."
+                data-mr="भारतीय शास्त्रीय नृत्य परंपरेशी जोडले जात कथक शिका.">
+                Learn Kathak while connecting with Indian classical
+                dance traditions.
+            </p>
+
+        </div>
 
 
-    <!-- ABOUT -->
+        <div class="divyaam-card">
 
-    <section class="diviyan-box">
+            <h3
+                data-en="Traditional Kathak"
+                data-mr="पारंपरिक कथक">
+                Traditional Kathak
+            </h3>
 
-        <div class="diviyan-section-title">
+            <p
+                data-en="Learn Tatkar, Chakkars, Taal, Laya, Abhinaya and traditional compositions."
+                data-mr="तत्कार, चक्कर, ताल, लय, अभिनय आणि पारंपरिक रचना शिका.">
+                Learn Tatkar, Chakkars, Taal, Laya,
+                Abhinaya and traditional compositions.
+            </p>
+
+        </div>
+
+
+        <div class="divyaam-card">
+
+            <h3
+                data-en="Performance Opportunities"
+                data-mr="सादरीकरणाच्या संधी">
+                Performance Opportunities
+            </h3>
+
+            <p
+                data-en="Students can develop stage confidence through performance opportunities."
+                data-mr="सादरीकरणाच्या संधींमधून विद्यार्थ्यांना स्टेजवरील आत्मविश्वास विकसित करता येतो.">
+                Students can develop stage confidence through
+                performance opportunities.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT DIVYAAM
+===================================================== -->
+
+<section class="divyaam-section">
+
+    <div class="divyaam-section-title">
+
+        <small
+            data-en="ABOUT"
+            data-mr="आमच्याबद्दल">
             ABOUT
-        </div>
+        </small>
 
-        <h3>About Divyaam</h3>
+        <h2
+            data-en="About Divyaam"
+            data-mr="दिव्याम बद्दल">
+            About Divyaam
+        </h2>
 
-        <p>
-            Divyaam represents beauty, grace and a connection with
-            something uplifting and meaningful.
+    </div>
+
+
+    <div class="divyaam-text-box">
+
+        <h3
+            data-en="About Divyaam"
+            data-mr="दिव्याम बद्दल">
+            About Divyaam
+        </h3>
+
+        <p
+            data-en="Divyaam represents beauty, grace and a connection with something uplifting and meaningful."
+            data-mr="दिव्याम सौंदर्य, नजाकत आणि प्रेरणादायी व अर्थपूर्ण गोष्टींशी जोडलेपण दर्शवते.">
+            Divyaam represents beauty, grace and a connection
+            with something uplifting and meaningful.
         </p>
 
-        <p>
-            At Divyaam, Kathak becomes a journey where students discover
-            rhythm, expression, discipline and creativity.
+
+        <h3
+            data-en="Our Vision"
+            data-mr="आमचे ध्येय">
+            Our Vision
+        </h3>
+
+        <p
+            data-en="Divyaam aims to create a welcoming space for children and adults to learn Kathak, build confidence and connect with the Indian classical dance tradition."
+            data-mr="मुलांना आणि प्रौढांना कथक शिकण्यासाठी, आत्मविश्वास वाढवण्यासाठी आणि भारतीय शास्त्रीय नृत्य परंपरेशी जोडण्यासाठी दिव्याम एक स्वागतार्ह वातावरण निर्माण करण्याचे उद्दिष्ट ठेवते.">
+            Divyaam aims to create a welcoming space for children
+            and adults to learn Kathak, build confidence and connect
+            with the Indian classical dance tradition.
         </p>
 
-        <h3>Our Vision</h3>
 
-        <p>
-            Divyaam aims to create a welcoming space for children and adults
-            to learn Kathak, build confidence and connect with the Indian
-            classical dance tradition.
+        <h3
+            data-en="Why Divyaam Was Created"
+            data-mr="दिव्यामची निर्मिती का झाली">
+            Why Divyaam Was Created
+        </h3>
+
+        <p
+            data-en="Divyaam was created to bring Kathak closer to learners of different ages and backgrounds while maintaining traditional foundations."
+            data-mr="पारंपरिक मूलभूत तत्त्वे जपत वेगवेगळ्या वयोगटातील आणि पार्श्वभूमीतील विद्यार्थ्यांपर्यंत कथक पोहोचवण्यासाठी दिव्यामची निर्मिती करण्यात आली.">
+            Divyaam was created to bring Kathak closer to learners
+            of different ages and backgrounds while maintaining
+            traditional foundations.
         </p>
 
-        <h3>Why Divyaam Was Created</h3>
+    </div>
 
-        <p>
-            Divyaam was created to bring Kathak closer to learners of
-            different ages and backgrounds while maintaining traditional
-            foundations.
-        </p>
-
-    </section>
+</section>
 
 
-    <!-- PHILOSOPHY -->
 
-    <section class="diviyan-box">
+<!-- =====================================================
+     PHILOSOPHY
+===================================================== -->
 
-        <div class="diviyan-section-title">
+<section class="divyaam-section">
+
+    <div class="divyaam-section-title">
+
+        <small
+            data-en="PHILOSOPHY"
+            data-mr="तत्त्वज्ञान">
             PHILOSOPHY
-        </div>
+        </small>
 
-        <div class="diviyan-philosophy-grid">
+        <h2
+            data-en="What We Believe"
+            data-mr="आमचा दृष्टिकोन">
+            What We Believe
+        </h2>
 
-            <div class="diviyan-card">
-                <h3>Tradition + Modern Learning</h3>
-                <p>
-                    Maintaining the traditional foundation of Kathak
-                    while making learning approachable.
-                </p>
-            </div>
+    </div>
 
-            <div class="diviyan-card">
-                <h3>Discipline</h3>
-                <p>
-                    Regular practice and dedication are an important
-                    part of learning Kathak.
-                </p>
-            </div>
 
-            <div class="diviyan-card">
-                <h3>Expression</h3>
-                <p>
-                    Students learn to express emotions and stories
-                    through movement.
-                </p>
-            </div>
+    <div class="divyaam-philosophy-grid">
 
-            <div class="diviyan-card">
-                <h3>Creativity</h3>
-                <p>
-                    Kathak encourages students to explore creativity
-                    through rhythm and expression.
-                </p>
-            </div>
 
-            <div class="diviyan-card">
-                <h3>Respect for Indian Classical Arts</h3>
-                <p>
-                    Students develop appreciation for the heritage
-                    and traditions of Indian classical dance.
-                </p>
-            </div>
+        <div class="divyaam-card">
+
+            <h3
+                data-en="Tradition + Modern Learning"
+                data-mr="परंपरा + आधुनिक शिक्षण">
+                Tradition + Modern Learning
+            </h3>
+
+            <p
+                data-en="Maintaining the traditional foundation of Kathak while making learning approachable."
+                data-mr="कथकची पारंपरिक पायाभरणी जपत शिकणे सोपे आणि समजण्यासारखे बनवणे.">
+                Maintaining the traditional foundation of Kathak
+                while making learning approachable.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="divyaam-card">
+
+            <h3
+                data-en="Discipline"
+                data-mr="शिस्त">
+                Discipline
+            </h3>
+
+            <p
+                data-en="Regular practice and dedication are an important part of learning Kathak."
+                data-mr="नियमित सराव आणि समर्पण हे कथक शिकण्याचा महत्त्वाचा भाग आहेत.">
+                Regular practice and dedication are an important
+                part of learning Kathak.
+            </p>
+
+        </div>
 
 
-    <!-- JOURNEY -->
+        <div class="divyaam-card">
 
-    <section class="diviyan-box">
+            <h3
+                data-en="Expression"
+                data-mr="अभिव्यक्ती">
+                Expression
+            </h3>
 
-        <div class="diviyan-section-title">
+            <p
+                data-en="Students learn to express emotions and stories through movement."
+                data-mr="विद्यार्थी हालचालींच्या माध्यमातून भावना आणि कथा व्यक्त करायला शिकतात.">
+                Students learn to express emotions and stories
+                through movement.
+            </p>
+
+        </div>
+
+
+        <div class="divyaam-card">
+
+            <h3
+                data-en="Creativity"
+                data-mr="सर्जनशीलता">
+                Creativity
+            </h3>
+
+            <p
+                data-en="Kathak encourages students to explore creativity through rhythm and expression."
+                data-mr="ताल आणि अभिव्यक्तीच्या माध्यमातून कथक विद्यार्थ्यांना सर्जनशीलता विकसित करण्यास प्रोत्साहित करते.">
+                Kathak encourages students to explore creativity
+                through rhythm and expression.
+            </p>
+
+        </div>
+
+
+        <div class="divyaam-card">
+
+            <h3
+                data-en="Respect for Indian Classical Arts"
+                data-mr="भारतीय शास्त्रीय कलांचा आदर">
+                Respect for Indian Classical Arts
+            </h3>
+
+            <p
+                data-en="Students develop appreciation for the heritage and traditions of Indian classical dance."
+                data-mr="विद्यार्थ्यांमध्ये भारतीय शास्त्रीय नृत्याच्या वारसा आणि परंपरांबद्दल आदर व प्रशंसा विकसित होते.">
+                Students develop appreciation for the heritage
+                and traditions of Indian classical dance.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     JOURNEY
+===================================================== -->
+
+<section class="divyaam-section">
+
+    <div class="divyaam-section-title">
+
+        <small
+            data-en="JOURNEY"
+            data-mr="प्रवास">
             JOURNEY
-        </div>
+        </small>
 
-        <div class="diviyan-journey">
+        <h2
+            data-en="Divyaam Journey"
+            data-mr="दिव्यामचा प्रवास">
+            Divyaam Journey
+        </h2>
 
-            <div>
-                <span>2020</span>
-                <p>Divyaam initiative begins.</p>
-            </div>
+    </div>
 
-            <div>
-                <span>2021</span>
-                <p>First group begins learning.</p>
-            </div>
 
-            <div>
-                <span>2022</span>
-                <p>
-                    The learning journey continues through
-                    discipline, practice and expression.
-                </p>
-            </div>
+    <div class="divyaam-journey">
 
-            <div>
-                <span>2024</span>
-                <p>Cultural performances.</p>
-            </div>
 
-            <div>
-                <span>2025</span>
-                <p>Children and adult classes expand.</p>
-            </div>
+        <div class="divyaam-year">
 
-            <div>
-                <span>2026</span>
-                <p>New performance and learning initiatives.</p>
-            </div>
+            <strong>2020</strong>
+
+            <p
+                data-en="Divyaam initiative begins."
+                data-mr="दिव्याम उपक्रमाची सुरुवात.">
+                Divyaam initiative begins.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="divyaam-year">
+
+            <strong>2021</strong>
+
+            <p
+                data-en="First group begins learning."
+                data-mr="पहिल्या गटाचे शिक्षण सुरू झाले.">
+                First group begins learning.
+            </p>
+
+        </div>
 
 
-    <!-- OUR GURU -->
+        <div class="divyaam-year">
 
-    <section class="diviyan-box">
+            <strong>2022</strong>
 
-        <div class="diviyan-section-title">
+            <p
+                data-en="The learning journey continues through discipline, practice and expression."
+                data-mr="शिस्त, सराव आणि अभिव्यक्तीच्या माध्यमातून शिकण्याचा प्रवास पुढे सुरू राहतो.">
+                The learning journey continues through
+                discipline, practice and expression.
+            </p>
+
+        </div>
+
+
+        <div class="divyaam-year">
+
+            <strong>2024</strong>
+
+            <p
+                data-en="Cultural performances."
+                data-mr="सांस्कृतिक सादरीकरणे.">
+                Cultural performances.
+            </p>
+
+        </div>
+
+
+        <div class="divyaam-year">
+
+            <strong>2025</strong>
+
+            <p
+                data-en="Children and adult classes expand."
+                data-mr="मुलांचे आणि प्रौढांचे वर्ग विस्तारले.">
+                Children and adult classes expand.
+            </p>
+
+        </div>
+
+
+        <div class="divyaam-year">
+
+            <strong>2026</strong>
+
+            <p
+                data-en="New performance and learning initiatives."
+                data-mr="नवीन सादरीकरण आणि शिक्षण उपक्रम.">
+                New performance and learning initiatives.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OUR GURU
+===================================================== -->
+
+<section class="divyaam-section">
+
+    <div class="divyaam-section-title">
+
+        <small
+            data-en="OUR GURU"
+            data-mr="आमचे गुरु">
             OUR GURU
+        </small>
+
+        <h2
+            data-en="Guru & Artistic Direction"
+            data-mr="गुरु आणि कलात्मक मार्गदर्शन">
+            Guru & Artistic Direction
+        </h2>
+
+    </div>
+
+
+    <div class="divyaam-guru-box">
+
+        <h2
+            data-en="Guru Ananya Deshmukh"
+            data-mr="गुरु अनन्या देशमुख">
+            Guru Ananya Deshmukh
+        </h2>
+
+        <h3
+            data-en="Kathak Guru & Artistic Director"
+            data-mr="कथक गुरु आणि कलात्मक संचालक">
+            Kathak Guru & Artistic Director
+        </h3>
+
+        <p
+            data-en="Guru Ananya Deshmukh has training in Kathak, classical repertoire, rhythm and Abhinaya. She teaches both children and adults."
+            data-mr="गुरु अनन्या देशमुख यांना कथक, शास्त्रीय रचना, ताल आणि अभिनयाचे प्रशिक्षण आहे. त्या मुलांना आणि प्रौढांना शिकवतात.">
+            Guru Ananya Deshmukh has training in Kathak,
+            classical repertoire, rhythm and Abhinaya.
+            She teaches both children and adults.
+        </p>
+
+
+        <h3
+            data-en="Achievements"
+            data-mr="उपलब्धी">
+            Achievements
+        </h3>
+
+        <ul>
+
+            <li
+                data-en="Cultural festivals"
+                data-mr="सांस्कृतिक महोत्सव">
+                Cultural festivals
+            </li>
+
+            <li
+                data-en="Kathak workshops"
+                data-mr="कथक कार्यशाळा">
+                Kathak workshops
+            </li>
+
+            <li
+                data-en="Stage performance guidance"
+                data-mr="स्टेज सादरीकरण मार्गदर्शन">
+                Stage performance guidance
+            </li>
+
+            <li
+                data-en="Classical dance programs"
+                data-mr="शास्त्रीय नृत्य कार्यक्रम">
+                Classical dance programs
+            </li>
+
+        </ul>
+
+
+        <div class="divyaam-quote"
+             data-en="“Every student has their own rhythm. My role is to help them discover it through discipline, practice and expression.”"
+             data-mr="“प्रत्येक विद्यार्थ्याची स्वतःची एक लय असते. शिस्त, सराव आणि अभिव्यक्तीच्या माध्यमातून ती लय शोधायला त्यांना मदत करणे ही माझी भूमिका आहे.”">
+            “Every student has their own rhythm. My role is to help
+            them discover it through discipline, practice and expression.”
         </div>
 
-        <div class="guru-content">
+    </div>
 
-            <div class="guru-info">
-
-                <h2>Guru Ananya Deshmukh</h2>
-
-                <h3>Kathak Guru & Artistic Director</h3>
-
-                <p>
-                    Guru Ananya Deshmukh has training in Kathak,
-                    classical repertoire, rhythm and Abhinaya.
-                    She teaches both children and adults.
-                </p>
-
-                <h3>Achievements</h3>
-
-                <ul>
-                    <li>Cultural festivals</li>
-                    <li>Kathak workshops</li>
-                    <li>Stage performance guidance</li>
-                    <li>Classical dance programs</li>
-                </ul>
-
-                <div class="guru-quote">
-                    “Every student has their own rhythm. My role is to help
-                    them discover it through discipline, practice and expression.”
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
+</section>
 
 
-    <!-- WHY DIVYAAM -->
 
-    <section class="diviyan-box">
+<!-- =====================================================
+     WHY DIVYAAM
+===================================================== -->
 
-        <div class="diviyan-section-title">
+<section class="divyaam-section">
+
+    <div class="divyaam-section-title">
+
+        <small
+            data-en="WHY DIVYAAM"
+            data-mr="दिव्याम का">
             WHY DIVYAAM
-        </div>
+        </small>
 
-        <div class="diviyan-card-grid">
+        <h2
+            data-en="A Place to Learn & Grow"
+            data-mr="शिकण्यासाठी आणि विकसित होण्यासाठी व्यासपीठ">
+            A Place to Learn & Grow
+        </h2>
 
-            <div class="diviyan-card">
-                <h3>Children Classes</h3>
-                <p>
-                    Specially designed learning environment for young students.
-                </p>
-            </div>
+    </div>
 
-            <div class="diviyan-card">
-                <h3>Beginner to Advanced</h3>
-                <p>
-                    Students can progress according to their learning level.
-                </p>
-            </div>
 
-            <div class="diviyan-card">
-                <h3>Traditional Kathak</h3>
-                <p>
-                    Training includes Tatkar, Chakkars, Taal, Laya,
-                    Abhinaya and compositions.
-                </p>
-            </div>
+    <div class="divyaam-card-grid">
 
-            <div class="diviyan-card">
-                <h3>Adult Classes</h3>
-                <p>
-                    Adults can learn Kathak regardless of previous
-                    dance experience.
-                </p>
-            </div>
 
-            <div class="diviyan-card">
-                <h3>Individual Attention</h3>
-                <p>
-                    Students receive personal guidance during
-                    their learning journey.
-                </p>
-            </div>
+        <div class="divyaam-card">
 
-            <div class="diviyan-card">
-                <h3>Performance Opportunities</h3>
-                <p>
-                    Students can develop confidence through stage
-                    and cultural performances.
-                </p>
-            </div>
+            <h3
+                data-en="Children Classes"
+                data-mr="मुलांचे वर्ग">
+                Children Classes
+            </h3>
+
+            <p
+                data-en="Specially designed learning environment for young students."
+                data-mr="लहान विद्यार्थ्यांसाठी विशेष तयार केलेले शिकण्याचे वातावरण.">
+                Specially designed learning environment
+                for young students.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="divyaam-card">
+
+            <h3
+                data-en="Beginner to Advanced"
+                data-mr="सुरुवातीपासून प्रगत स्तरापर्यंत">
+                Beginner to Advanced
+            </h3>
+
+            <p
+                data-en="Students can progress according to their learning level."
+                data-mr="विद्यार्थी त्यांच्या शिकण्याच्या पातळीनुसार पुढे जाऊ शकतात.">
+                Students can progress according
+                to their learning level.
+            </p>
+
+        </div>
 
 
-    <!-- FAQ -->
+        <div class="divyaam-card">
 
-    <section class="diviyan-box">
+            <h3
+                data-en="Traditional Kathak"
+                data-mr="पारंपरिक कथक">
+                Traditional Kathak
+            </h3>
 
-        <div class="diviyan-section-title">
+            <p
+                data-en="Training includes Tatkar, Chakkars, Taal, Laya, Abhinaya and compositions."
+                data-mr="प्रशिक्षणामध्ये तत्कार, चक्कर, ताल, लय, अभिनय आणि रचना यांचा समावेश आहे.">
+                Training includes Tatkar, Chakkars,
+                Taal, Laya, Abhinaya and compositions.
+            </p>
+
+        </div>
+
+
+        <div class="divyaam-card">
+
+            <h3
+                data-en="Adult Classes"
+                data-mr="प्रौढांचे वर्ग">
+                Adult Classes
+            </h3>
+
+            <p
+                data-en="Adults can learn Kathak regardless of previous dance experience."
+                data-mr="पूर्वीचा नृत्याचा अनुभव नसला तरी प्रौढ कथक शिकू शकतात.">
+                Adults can learn Kathak regardless of
+                previous dance experience.
+            </p>
+
+        </div>
+
+
+        <div class="divyaam-card">
+
+            <h3
+                data-en="Individual Attention"
+                data-mr="वैयक्तिक मार्गदर्शन">
+                Individual Attention
+            </h3>
+
+            <p
+                data-en="Students receive personal guidance during their learning journey."
+                data-mr="विद्यार्थ्यांना त्यांच्या शिकण्याच्या प्रवासात वैयक्तिक मार्गदर्शन मिळते.">
+                Students receive personal guidance during
+                their learning journey.
+            </p>
+
+        </div>
+
+
+        <div class="divyaam-card">
+
+            <h3
+                data-en="Performance Opportunities"
+                data-mr="सादरीकरणाच्या संधी">
+                Performance Opportunities
+            </h3>
+
+            <p
+                data-en="Students can develop confidence through stage and cultural performances."
+                data-mr="स्टेज आणि सांस्कृतिक सादरीकरणांमधून विद्यार्थी आत्मविश्वास विकसित करू शकतात.">
+                Students can develop confidence through
+                stage and cultural performances.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="divyaam-section">
+
+    <div class="divyaam-section-title">
+
+        <small
+            data-en="FAQ"
+            data-mr="वारंवार विचारले जाणारे प्रश्न">
             FAQ
-        </div>
+        </small>
 
-        <div class="diviyan-faq">
+        <h2
+            data-en="Frequently Asked Questions"
+            data-mr="वारंवार विचारले जाणारे प्रश्न">
+            Frequently Asked Questions
+        </h2>
 
-            <div>
-                <h3>At what age can children start Kathak?</h3>
-                <p>
-                    Children can begin learning Kathak according
-                    to their age and readiness.
-                </p>
-            </div>
+    </div>
 
-            <div>
-                <h3>Do I need previous dance experience?</h3>
-                <p>
-                    No. Beginners can start learning Kathak
-                    from the fundamentals.
-                </p>
-            </div>
 
-            <div>
-                <h3>How frequently are classes conducted?</h3>
-                <p>
-                    Class frequency depends on the batch
-                    and learning schedule.
-                </p>
-            </div>
+    <div class="divyaam-faq">
 
-            <div>
-                <h3>Are online learning options available?</h3>
-                <p>
-                    Online learning options can be provided
-                    depending on the available batch.
-                </p>
-            </div>
 
-            <div>
-                <h3>Are examinations available?</h3>
-                <p>
-                    Students can be guided for classical dance
-                    examinations when applicable.
-                </p>
-            </div>
+        <div class="divyaam-faq-item">
+
+            <h3
+                data-en="At what age can children start Kathak?"
+                data-mr="मुलं कोणत्या वयात कथक सुरू करू शकतात?">
+                At what age can children start Kathak?
+            </h3>
+
+            <p
+                data-en="Children can begin learning Kathak according to their age and readiness."
+                data-mr="मुलं त्यांच्या वय आणि तयारीनुसार कथक शिकण्यास सुरुवात करू शकतात.">
+                Children can begin learning Kathak
+                according to their age and readiness.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="divyaam-faq-item">
+
+            <h3
+                data-en="Do I need previous dance experience?"
+                data-mr="मागील नृत्याचा अनुभव आवश्यक आहे का?">
+                Do I need previous dance experience?
+            </h3>
+
+            <p
+                data-en="No. Beginners can start learning Kathak from the fundamentals."
+                data-mr="नाही. सुरुवातीपासून नवशिके कथक शिकू शकतात.">
+                No. Beginners can start learning Kathak
+                from the fundamentals.
+            </p>
+
+        </div>
+
+
+        <div class="divyaam-faq-item">
+
+            <h3
+                data-en="How frequently are classes conducted?"
+                data-mr="वर्ग किती वेळा घेतले जातात?">
+                How frequently are classes conducted?
+            </h3>
+
+            <p
+                data-en="Class frequency depends on the batch and learning schedule."
+                data-mr="वर्गांची वारंवारता बॅच आणि शिकण्याच्या वेळापत्रकावर अवलंबून असते.">
+                Class frequency depends on the batch
+                and learning schedule.
+            </p>
+
+        </div>
+
+
+        <div class="divyaam-faq-item">
+
+            <h3
+                data-en="Are online learning options available?"
+                data-mr="ऑनलाइन शिकण्याचे पर्याय उपलब्ध आहेत का?">
+                Are online learning options available?
+            </h3>
+
+            <p
+                data-en="Online learning options can be provided depending on the available batch."
+                data-mr="उपलब्ध बॅचनुसार ऑनलाइन शिकण्याचे पर्याय दिले जाऊ शकतात.">
+                Online learning options can be provided
+                depending on the available batch.
+            </p>
+
+        </div>
+
+
+        <div class="divyaam-faq-item">
+
+            <h3
+                data-en="Are examinations available?"
+                data-mr="परीक्षांची सुविधा उपलब्ध आहे का?">
+                Are examinations available?
+            </h3>
+
+            <p
+                data-en="Students can be guided for classical dance examinations when applicable."
+                data-mr="लागू असल्यास विद्यार्थ्यांना शास्त्रीय नृत्याच्या परीक्षांसाठी मार्गदर्शन केले जाऊ शकते.">
+                Students can be guided for classical dance
+                examinations when applicable.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section class="gallery-section">
+
+    <h2 class="gallery-title"
+        data-en="Divyaam Gallery"
+        data-mr="दिव्याम गॅलरी">
+        Divyaam Gallery
+    </h2>
+
+
+    <div class="gallery-grid">
+
+
+        <div class="gallery-item">
+
+            <img src="gallery/gallery.png"
+                 alt="Divyaam Kathak Performance">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="gallery/gallery1.png"
+                 alt="Divyaam Kathak Dance">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="gallery/gallery2.png"
+                 alt="Divyaam Kathak Class">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="gallery/gallery3.png"
+                 alt="Divyaam Kathak Practice">
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="divyaam-cta">
+
+    <small
+        data-en="YOUR CREATIVE JOURNEY"
+        data-mr="तुमचा सर्जनशील प्रवास">
+        YOUR CREATIVE JOURNEY
+    </small>
+
+    <h2
+        data-en="Begin Your Kathak Journey"
+        data-mr="तुमचा कथक प्रवास सुरू करा">
+        Begin Your Kathak Journey
+    </h2>
+
+    <p
+        data-en="Explore Divyaam and discover the beauty of Kathak through rhythm, expression and tradition."
+        data-mr="दिव्याम जाणून घ्या आणि ताल, अभिव्यक्ती व परंपरेच्या माध्यमातून कथकचे सौंदर्य अनुभवता घ्या.">
+        Explore Divyaam and discover the beauty of Kathak
+        through rhythm, expression and tradition.
+    </p>
+
+    <a href="booknow.html"
+       class="divyaam-btn"
+       data-en="Book Now"
+       data-mr="आता बुक करा">
+        Book Now
+    </a>
+
+</section>
+
 
 </main>
 
+
+
+<!-- =====================================================
+     SOCIAL BAR
+===================================================== -->
+
 <div class="social-bar">
 
-    <a href="https://www.facebook.com/" target="_blank" class="facebook-icon">
+    <a href="https://www.facebook.com/"
+       target="_blank"
+       class="facebook-icon">
+
         <svg viewBox="0 0 24 24">
+
             <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1z"/>
+
         </svg>
+
     </a>
 
-    <a href="https://www.instagram.com/tri_performing_arts/" target="_blank" class="instagram-icon">
+
+    <a href="https://www.instagram.com/tri_performing_arts/"
+       target="_blank"
+       class="instagram-icon">
+
         <svg viewBox="0 0 24 24">
-            <rect x="3" y="3" width="18" height="18" rx="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="1"/>
+
+            <rect x="3"
+                  y="3"
+                  width="18"
+                  height="18"
+                  rx="5"/>
+
+            <circle cx="12"
+                    cy="12"
+                    r="4"/>
+
+            <circle cx="17.5"
+                    cy="6.5"
+                    r="1"/>
+
         </svg>
+
     </a>
 
-    <a href="https://www.youtube.com/" target="_blank" class="youtube-icon">
+
+    <a href="https://www.youtube.com/"
+       target="_blank"
+       class="youtube-icon">
+
         <svg viewBox="0 0 24 24">
-            <rect x="2" y="5" width="20" height="14" rx="4"/>
+
+            <rect x="2"
+                  y="5"
+                  width="20"
+                  height="14"
+                  rx="4"/>
+
             <polygon points="10,8 17,12 10,16"/>
+
         </svg>
+
     </a>
 
-    <a href="https://wa.me/919356769743" target="_blank" class="whatsapp-icon">
+
+    <a href="https://wa.me/919890654588?text=Hello%2C%20I%20am%20interested%20in%20TRI%20School%20of%20Performing%20Arts."
+       target="_blank"
+       class="whatsapp-icon">
+
         <svg viewBox="0 0 32 32">
+
             <path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.8 6.4L3 29l6.8-1.8C11.7 28.4 13.8 29 16 29c7.2 0 13-5.8 13-13S23.2 3 16 3z"
-                  fill="none" stroke="white" stroke-width="2"/>
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"/>
+
             <path d="M11.5 9.8c-.4 0-.8.2-1 .6-.3.5-.8 1.6-.8 2.4 0 .4.2 1 .5 1.6.4.8 1 1.7 1.8 2.5 1.4 1.5 3.3 2.6 5.1 3.2.7.2 1.3.1 1.8-.2.5-.3 1.1-.9 1.3-1.4.2-.5.2-.8.1-1-.1-.2-.4-.3-.8-.5l-1.7-.8c-.3-.1-.6-.2-.8.2l-.7.9c-.2.3-.4.3-.7.2-.4-.2-1.5-.6-2.3-1.4-.9-.8-1.5-1.8-1.7-2.2-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.7-1.7c-.2-.5-.5-.7-.8-.7z"
                   fill="white"/>
+
         </svg>
+
     </a>
 
-    <a href="#" class="ai-agent-button"
+
+    <a href="#"
+       class="ai-agent-button"
        onclick="openAIChat(); return false;"
        title="TRI Assistant">
+
         TRI Assistant
+
     </a>
 
 </div>
 
-<script src="script.js"></script>
-<script type="module" src="firebase.js"></script>
-<script type="module" src="ai.js"></script>
 
-<div id="aiChatBox" class="ai-chat-box">
+
+<!-- =====================================================
+     AI CHAT
+===================================================== -->
+
+<div id="aiChatBox"
+     class="ai-chat-box">
 
     <div class="ai-chat-header">
-        <span>TRI Assistant</span>
-        <button onclick="closeAIChat()">×</button>
+
+        <span>
+            TRI Assistant
+        </span>
+
+        <button onclick="closeAIChat()">
+            ×
+        </button>
+
     </div>
 
-    <div id="aiChatMessages" class="ai-chat-messages">
+
+    <div id="aiChatMessages"
+         class="ai-chat-messages">
+
         <div class="ai-message">
             Hi! I'm TRI Assistant. How can I help you?
         </div>
+
     </div>
 
+
     <div class="ai-chat-input">
+
         <input
             type="text"
             id="aiUserInput"
             placeholder="Type your message..."
         >
 
-        <button onclick="sendAIMessage()">Send</button>
+        <button onclick="sendAIMessage()">
+            Send
+        </button>
+
     </div>
 
 </div>
 
+
+
+<!-- =====================================================
+     SCRIPTS
+===================================================== -->
+
+<script src="script.js"></script>
+
+<script type="module" src="firebase.js"></script>
+
+<script type="module" src="ai.js"></script>
+
+
+<!-- =====================================================
+     LANGUAGE
+===================================================== -->
+
+<script>
+
+(function () {
+
+    let currentLanguage =
+        localStorage.getItem("triLanguage") || "en";
+
+
+    function applyLanguage() {
+
+        document
+            .querySelectorAll("[data-en][data-mr]")
+            .forEach(function (element) {
+
+                const text =
+                    element.getAttribute(
+                        "data-" + currentLanguage
+                    );
+
+                if (text !== null) {
+                    element.textContent = text;
+                }
+
+            });
+
+
+        document
+            .querySelectorAll(
+                "[data-placeholder-en][data-placeholder-mr]"
+            )
+            .forEach(function (input) {
+
+                input.placeholder =
+                    input.getAttribute(
+                        "data-placeholder-" + currentLanguage
+                    );
+
+            });
+
+
+        const languageBtn =
+            document.getElementById("languageBtn");
+
+
+        if (languageBtn) {
+
+            if (currentLanguage === "en") {
+
+                languageBtn.textContent = "मराठी";
+
+                document.documentElement.lang = "en";
+
+            } else {
+
+                languageBtn.textContent = "English";
+
+                document.documentElement.lang = "mr";
+
+            }
+
+        }
+
+    }
+
+
+    window.toggleLanguage = function () {
+
+        currentLanguage =
+            currentLanguage === "en"
+                ? "mr"
+                : "en";
+
+
+        localStorage.setItem(
+            "triLanguage",
+            currentLanguage
+        );
+
+
+        applyLanguage();
+
+    };
+
+
+    window.toggleDropdown =
+        window.toggleDropdown ||
+        function (menuId) {
+
+            const menu =
+                document.getElementById(menuId);
+
+            if (!menu) return;
+
+
+            document
+                .querySelectorAll(".submenu.show")
+                .forEach(function (item) {
+
+                    if (item !== menu) {
+                        item.classList.remove("show");
+                    }
+
+                });
+
+
+            menu.classList.toggle("show");
+
+        };
+
+
+    applyLanguage();
+
+})();
+
+</script>
+
+
 </body>
+
 </html>

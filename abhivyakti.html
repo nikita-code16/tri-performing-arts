@@ -8,46 +8,272 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+
+        /* ================= ABHIVYAKTI PAGE ================= */
+
+        html,
+        body {
+            background: #ffffff !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #21152f !important;
+            position: relative;
+            z-index: 1000;
+        }
+
+        header nav {
+            background: transparent !important;
+        }
+
+        header .navbar {
+            background: transparent !important;
+        }
+
+        header .navbar > li > a {
+            background: transparent !important;
+            color: #ffffff !important;
+            box-shadow: none !important;
+        }
+
+        header .navbar > li > a:hover {
+            background: #c9a25a !important;
+            color: #21152f !important;
+        }
+
+        header .navbar > li > a.active {
+            background: #c9a25a !important;
+            color: #21152f !important;
+        }
+
+        header .language-btn {
+            background: transparent !important;
+            color: #ffffff !important;
+            box-shadow: none !important;
+            border-color: #c9a25a !important;
+        }
+
+        header .language-btn:hover {
+            background: #c9a25a !important;
+            color: #21152f !important;
+        }
+
+
+        /* ================= MAIN ================= */
+
+        main {
+            background: #ffffff !important;
+        }
+
+
+        /* ================= ABHIVYAKTI LOGO ================= */
+
+        .abhivyakti-logo {
+            width: 188px;
+            height: 146px;
+
+            margin: 0 auto 25px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #ffffff;
+
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .abhivyakti-logo img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            max-width: 100%;
+            max-height: 100%;
+
+            object-fit: contain;
+            margin: 0;
+        }
+
+
+        /* ================= MIDDLE CONTENT BOXES ================= */
+
+        .content-section {
+            background: linear-gradient(
+                to bottom,
+                #aaa5b1 0%,
+                #817888 42%,
+                #33223e 100%
+            ) !important;
+
+            border: 1px solid #c9a25a !important;
+
+            border-radius: 0 0 12px 12px !important;
+
+            color: #ffffff !important;
+
+            box-shadow: 0 12px 28px rgba(50, 30, 60, 0.20) !important;
+        }
+
+        /* Middle section headings - NOT light purple */
+        .content-section:not(#abhivyakti):not(.brochure-section) h2 {
+            color: #ffffff !important;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .content-section:not(#abhivyakti):not(.brochure-section) h3 {
+            color: #ffffff !important;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        /* Only content text stays light purple */
+        .content-section:not(#abhivyakti):not(.brochure-section) p {
+            color: #e6e0ea !important;
+        }
+
+        .content-section strong {
+            color: #ffffff !important;
+        }
+
+
+        /* ================= FIRST ABHIVYAKTI PAGE ================= */
+
+        #abhivyakti {
+            background: #1B2D4A !important;
+
+            width: calc(100% + 60px) !important;
+            max-width: none !important;
+
+            margin-left: -30px !important;
+            margin-right: -30px !important;
+
+            margin-top: -60px !important;
+            margin-bottom: 40px !important;
+
+            box-sizing: border-box !important;
+
+            border: none !important;
+            border-radius: 0 !important;
+
+            box-shadow: none !important;
+
+            color: #ffffff !important;
+
+            text-align: center;
+
+            padding: 115px 30px 75px !important;
+
+            min-height: 520px !important;
+        }
+
+        #abhivyakti h2 {
+            color: #ffffff !important;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 50px;
+
+            margin-bottom: 15px;
+        }
+
+        #abhivyakti p {
+            color: #e6e0ea !important;
+        }
+
+
         /* ================= ABHIVYAKTI GALLERY ================= */
 
         .gallery-section {
             max-width: 900px;
+
             margin: 40px auto;
+
             padding: 40px 50px;
+
             box-sizing: border-box;
 
-            background: #ffffff;
-            border: 1px solid #e5d9ed;
-            border-radius: 18px;
+            background: linear-gradient(
+                to bottom,
+                #aaa5b1 0%,
+                #817888 42%,
+                #33223e 100%
+            ) !important;
 
-            box-shadow: 0 6px 22px rgba(75, 49, 91, 0.10);
+            border: 1px solid #c9a25a !important;
+
+            border-radius: 0 0 12px 12px !important;
+
+            box-shadow: 0 12px 28px rgba(50, 30, 60, 0.20) !important;
+
+            transition: 0.3s;
         }
 
+        .gallery-section:hover {
+            box-shadow: 0 15px 30px rgba(50, 30, 60, 0.25) !important;
+        }
+
+        /* Gallery heading - not light purple */
         .gallery-title {
             text-align: center;
-            color: #4b315b;
+
+            color: #ffffff !important;
+
+            font-family: Georgia, "Times New Roman", serif;
+
             font-size: 28px;
+
             margin: 0 0 25px;
         }
 
         .gallery-grid {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 20px;
         }
 
         .gallery-item {
             overflow: hidden;
-            border-radius: 14px;
-            border: 1px solid #e5d9ed;
-            background: #faf7fc;
+
+            border-radius: 0 0 12px 12px !important;
+
+            border: 1px solid #c9a25a !important;
+
+            background: linear-gradient(
+                to bottom,
+                #aaa5b1 0%,
+                #817888 42%,
+                #33223e 100%
+            ) !important;
+
+            box-shadow: 0 12px 28px rgba(50, 30, 60, 0.20);
+
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+
+            box-shadow: 0 15px 30px rgba(50, 30, 60, 0.25);
         }
 
         .gallery-item img {
             width: 100%;
+
             height: 230px;
+
             display: block;
+
             object-fit: cover;
+
             transition: 0.3s;
         }
 
@@ -55,7 +281,162 @@
             transform: scale(1.04);
         }
 
+
+        /* ================= LAST BROCHURE PAGE ================= */
+
+        .brochure-section {
+            text-align: center;
+
+            background: #1B2D4A !important;
+
+            width: calc(100% + 60px) !important;
+            max-width: none !important;
+
+            margin-left: -30px !important;
+            margin-right: -30px !important;
+
+            margin-top: 40px !important;
+            margin-bottom: -60px !important;
+
+            box-sizing: border-box !important;
+
+            border: none !important;
+            border-radius: 0 !important;
+
+            box-shadow: none !important;
+
+            color: #ffffff !important;
+
+            padding: 60px 30px !important;
+        }
+
+        .brochure-section h2 {
+            color: #ffffff !important;
+        }
+
+        /* Brochure content centered in around 2 lines */
+        .brochure-section p {
+            color: #e6e0ea !important;
+
+            max-width: 850px !important;
+
+            margin: 15px auto 25px !important;
+
+            text-align: center !important;
+
+            line-height: 1.8 !important;
+
+            font-size: 17px !important;
+        }
+
+
+        /* ================= BROCHURE BUTTON ================= */
+
+        .brochure-btn {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 12px 28px;
+
+            background: #33223e !important;
+
+            color: #ffffff !important;
+
+            border: 1px solid #c9a25a !important;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: all 0.3s ease;
+
+            cursor: pointer;
+        }
+
+        .brochure-btn:hover,
+        .brochure-btn:focus,
+        .brochure-btn:active {
+            background: #c9a25a !important;
+
+            color: #33223e !important;
+
+            border-color: #c9a25a !important;
+
+            outline: none;
+        }
+
+
+        /* ================= SOCIAL BAR ================= */
+
+        .social-bar {
+            background: transparent !important;
+        }
+
+
+        /* ================= MOBILE ================= */
+
         @media (max-width: 700px) {
+
+            header {
+                background: #21152f !important;
+            }
+
+            header nav {
+                background: transparent !important;
+            }
+
+            header .navbar {
+                background: transparent !important;
+            }
+
+            header .navbar > li > a {
+                background: transparent !important;
+                color: #ffffff !important;
+            }
+
+            header .navbar > li > a:hover,
+            header .navbar > li > a.active {
+                background: #c9a25a !important;
+                color: #21152f !important;
+            }
+
+            header .language-btn {
+                background: transparent !important;
+                color: #ffffff !important;
+            }
+
+            header .language-btn:hover {
+                background: #c9a25a !important;
+                color: #21152f !important;
+            }
+
+            .abhivyakti-logo {
+                width: 188px;
+                height: 146px;
+            }
+
+            main {
+                padding: 28px 12px !important;
+            }
+
+            #abhivyakti {
+                width: calc(100% + 24px) !important;
+                max-width: none !important;
+
+                margin-left: -12px !important;
+                margin-right: -12px !important;
+
+                margin-top: -28px !important;
+                margin-bottom: 28px !important;
+
+                padding: 80px 20px 50px !important;
+
+                min-height: 480px !important;
+            }
+
             .gallery-section {
                 padding: 30px 20px;
             }
@@ -67,12 +448,36 @@
             .gallery-title {
                 font-size: 24px;
             }
+
+            .brochure-section {
+                width: calc(100% + 24px) !important;
+                max-width: none !important;
+
+                margin-left: -12px !important;
+                margin-right: -12px !important;
+
+                margin-top: 28px !important;
+                margin-bottom: -28px !important;
+
+                padding: 40px 20px !important;
+            }
+
+            .brochure-section p {
+                max-width: 700px !important;
+            }
+
+            .brochure-btn {
+                padding: 11px 22px;
+            }
         }
+
     </style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -102,41 +507,66 @@
 
     </div>
 
+
     <nav>
+
         <ul class="navbar">
 
             <li>
+
+                <a href="index.html"
+                   data-en="Home"
+                   data-mr="मुख्यपृष्ठ">
+                    Home
+                </a>
+
+            </li>
+
+
+            <li>
+
                 <a href="about.html"
                    data-en="About"
                    data-mr="आमच्याबद्दल">
                     About
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="diviyan.html"
                    data-en="Divyaam"
                    data-mr="दिव्याम">
                     Divyaam
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="abhivyakti.html"
                    class="active"
                    data-en="Abhivyakti"
                    data-mr="अभिव्यक्ती">
                     Abhivyakti
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="gabha.html"
                    data-en="Gabha"
                    data-mr="गाभा">
                     Gabha
                 </a>
+
             </li>
+
 
             <li class="dropdown">
 
@@ -150,357 +580,592 @@
                 <ul id="bookingMenu" class="submenu">
 
                     <li>
+
                         <a href="booknow.html"
                            data-en="Book Now"
                            data-mr="आता बुक करा">
                             Book Now
                         </a>
+
                     </li>
 
                 </ul>
 
             </li>
 
+
             <li>
+
                 <a href="contact.html"
                    data-en="Contact"
                    data-mr="संपर्क">
                     Contact
                 </a>
+
             </li>
 
+
             <li>
+
                 <button id="languageBtn"
                         class="language-btn"
                         onclick="toggleLanguage()">
                     मराठी
                 </button>
+
             </li>
 
+
         </ul>
+
     </nav>
 
 </header>
 
+
+
 <main>
 
-    <!-- Existing Abhivyakti Intro -->
 
-    <section id="abhivyakti" class="content-section">
+    <!-- ================= FIRST ABHIVYAKTI PAGE ================= -->
+
+    <section id="abhivyakti"
+             class="content-section">
+
 
         <div class="abhivyakti-logo">
+
             <img src="abhivyakti.png"
                  alt="Abhivyakti Logo">
+
         </div>
 
-        <h2 data-en="Abhivyakti School of Film & Theatre"
-            data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटर">
-            Abhivyakti School of Film & Theatre
+
+        <h2>
+            <span style="color:#c9a25a;">Abhivyakti</span> School of Film & Theatre
         </h2>
 
-        <p data-en="Abhivyakti School of Film & Theatre is a theatre education program in Gadhinglaj."
-           data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटर हा गडहिंग्लजमधील नाट्य शिक्षण कार्यक्रम आहे.">
+
+        <p
+            data-en="Abhivyakti School of Film & Theatre is a theatre education program in Gadhinglaj."
+            data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटर हा गडहिंग्लजमधील नाट्य शिक्षण कार्यक्रम आहे.">
+
             Abhivyakti School of Film & Theatre is a theatre
             education program in Gadhinglaj.
+
         </p>
 
-        <p data-en="The Program focuses on practical theatre training, creativity, self-development and social awareness."
-           data-mr="या कार्यक्रमात प्रात्यक्षिक नाट्य प्रशिक्षण, सर्जनशीलता, व्यक्तिमत्त्व विकास आणि सामाजिक जागरूकतेवर भर दिला जातो.">
+
+        <p
+            data-en="The Program focuses on practical theatre training, creativity, self-development and social awareness."
+            data-mr="या कार्यक्रमात प्रात्यक्षिक नाट्य प्रशिक्षण, सर्जनशीलता, व्यक्तिमत्त्व विकास आणि सामाजिक जागरूकतेवर भर दिला जातो.">
+
             The Program focuses on practical theatre training,
             creativity,self-development and social awareness.
+
         </p>
+
 
     </section>
 
 
-    <!-- Course Overview -->
+
+    <!-- ================= COURSE OVERVIEW ================= -->
 
     <section class="content-section">
 
-        <h2 data-en="Course Overview"
+
+        <h2
+            data-en="Course Overview"
             data-mr="कोर्सचा आढावा">
+
             Course Overview
+
         </h2>
 
-        <h3 data-en="About the Course"
+
+        <h3
+            data-en="About the Course"
             data-mr="कोर्सबद्दल">
+
             About the Course
+
         </h3>
 
-        <p data-en="The Abhivyakti theatre program is designed to develop acting skills, creativity, confidence and stage performance through practical theatre training."
-           data-mr="अभिव्यक्ती थिएटर कार्यक्रम प्रात्यक्षिक नाट्य प्रशिक्षणाद्वारे अभिनय कौशल्य, सर्जनशीलता, आत्मविश्वास आणि स्टेजवरील सादरीकरण विकसित करण्यासाठी तयार करण्यात आला आहे.">
+
+        <p
+            data-en="The Abhivyakti theatre program is designed to develop acting skills, creativity, confidence and stage performance through practical theatre training."
+            data-mr="अभिव्यक्ती थिएटर कार्यक्रम प्रात्यक्षिक नाट्य प्रशिक्षणाद्वारे अभिनय कौशल्य, सर्जनशीलता, आत्मविश्वास आणि स्टेजवरील सादरीकरण विकसित करण्यासाठी तयार करण्यात आला आहे.">
+
             The Abhivyakti theatre program is designed to develop
             acting skills, creativity, confidence and stage performance
             through practical theatre training.
+
         </p>
 
 
-        <h3 data-en="Course Duration"
+        <h3
+            data-en="Course Duration"
             data-mr="कोर्सचा कालावधी">
+
             Course Duration
+
         </h3>
+
 
         <p>
-            <strong data-en="Duration:"
-                      data-mr="कालावधी:">
+
+            <strong
+                data-en="Duration:"
+                data-mr="कालावधी:">
                 Duration:
             </strong>
+
             3 Months
+
         </p>
 
 
-        <h3 data-en="Certificate Completion"
+        <h3
+            data-en="Certificate Completion"
             data-mr="प्रमाणपत्र पूर्णता">
+
             Certificate Completion
+
         </h3>
 
-        <p data-en="Students who successfully complete the course receive a Certificate of Completion."
-           data-mr="कोर्स यशस्वीरित्या पूर्ण करणाऱ्या विद्यार्थ्यांना पूर्णता प्रमाणपत्र मिळते.">
+
+        <p
+            data-en="Students who successfully complete the course receive a Certificate of Completion."
+            data-mr="कोर्स यशस्वीरित्या पूर्ण करणाऱ्या विद्यार्थ्यांना पूर्णता प्रमाणपत्र मिळते.">
+
             Students who successfully complete the course receive
             a Certificate of Completion.
+
         </p>
 
-        <p data-en="🎓 Certificate of Completion"
-           data-mr="🎓 पूर्णता प्रमाणपत्र">
+
+        <p
+            data-en="🎓 Certificate of Completion"
+            data-mr="🎓 पूर्णता प्रमाणपत्र">
+
             🎓 Certificate of Completion
+
         </p>
+
 
     </section>
 
 
-    <!-- About Us -->
+
+    <!-- ================= ABOUT US ================= -->
 
     <section class="content-section">
 
-        <h2 data-en="About Us"
+
+        <h2
+            data-en="About Us"
             data-mr="आमच्याबद्दल">
+
             About Us
+
         </h2>
 
 
-        <h3 data-en="About Abhivyakti"
+        <h3
+            data-en="About Abhivyakti"
             data-mr="अभिव्यक्तीबद्दल">
+
             About Abhivyakti
+
         </h3>
 
-        <p data-en="Abhivyakti School of Film & Theatre is a theatre education initiative in Gadhinglaj focused on practical learning, creativity and performance."
-           data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटर हा गडहिंग्लजमधील प्रात्यक्षिक शिक्षण, सर्जनशीलता आणि सादरीकरणावर आधारित नाट्य शिक्षण उपक्रम आहे.">
+
+        <p
+            data-en="Abhivyakti School of Film & Theatre is a theatre education initiative in Gadhinglaj focused on practical learning, creativity and performance."
+            data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटर हा गडहिंग्लजमधील प्रात्यक्षिक शिक्षण, सर्जनशीलता आणि सादरीकरणावर आधारित नाट्य शिक्षण उपक्रम आहे.">
+
             Abhivyakti School of Film & Theatre is a theatre education
             initiative in Gadhinglaj focused on practical learning,
             creativity and performance.
+
         </p>
 
 
-        <h3 data-en="Our Faculty"
+        <h3
+            data-en="Our Faculty"
             data-mr="आमचे शिक्षक">
+
             Our Faculty
+
         </h3>
 
-        <p data-en="Our faculty members guide students through practical theatre exercises, acting training, voice and speech development and stage performance."
-           data-mr="आमचे शिक्षक विद्यार्थ्यांना प्रात्यक्षिक नाट्य सराव, अभिनय प्रशिक्षण, आवाज व भाषण विकास आणि स्टेज सादरीकरणासाठी मार्गदर्शन करतात.">
+
+        <p
+            data-en="Our faculty members guide students through practical theatre exercises, acting training, voice and speech development and stage performance."
+            data-mr="आमचे शिक्षक विद्यार्थ्यांना प्रात्यक्षिक नाट्य सराव, अभिनय प्रशिक्षण, आवाज व भाषण विकास आणि स्टेज सादरीकरणासाठी मार्गदर्शन करतात.">
+
             Our faculty members guide students through practical theatre
             exercises, acting training, voice and speech development
             and stage performance.
+
         </p>
+
 
     </section>
 
 
-    <!-- Types of Courses -->
+
+    <!-- ================= TYPES OF COURSES ================= -->
 
     <section class="content-section">
 
-        <h2 data-en="Types of Courses"
+
+        <h2
+            data-en="Types of Courses"
             data-mr="कोर्सचे प्रकार">
+
             Types of Courses
+
         </h2>
 
 
-        <h3 data-en="Foundation in Acting"
+        <h3
+            data-en="Foundation in Acting"
             data-mr="अभिनयाची मूलभूत माहिती">
+
             Foundation in Acting
+
         </h3>
 
-        <p data-en="A foundation-level course focusing on basic acting techniques, expressions, character development and stage confidence."
-           data-mr="मूलभूत अभिनय तंत्र, भाव, व्यक्तिरेखा विकास आणि स्टेजवरील आत्मविश्वासावर केंद्रित प्राथमिक स्तरावरील कोर्स.">
+
+        <p
+            data-en="A foundation-level course focusing on basic acting techniques, expressions, character development and stage confidence."
+            data-mr="मूलभूत अभिनय तंत्र, भाव, व्यक्तिरेखा विकास आणि स्टेजवरील आत्मविश्वासावर केंद्रित प्राथमिक स्तरावरील कोर्स.">
+
             A foundation-level course focusing on basic acting techniques,
             expressions, character development and stage confidence.
+
         </p>
 
 
-        <h3 data-en="Advanced Theatre and Acting"
+        <h3
+            data-en="Advanced Theatre and Acting"
             data-mr="प्रगत थिएटर आणि अभिनय">
+
             Advanced Theatre and Acting
+
         </h3>
 
-        <p data-en="Advanced practical training in theatre and acting, including performance techniques, character work and stage activities."
-           data-mr="सादरीकरण तंत्र, व्यक्तिरेखा आणि स्टेजवरील उपक्रमांसह थिएटर आणि अभिनयाचे प्रगत प्रात्यक्षिक प्रशिक्षण.">
+
+        <p
+            data-en="Advanced practical training in theatre and acting, including performance techniques, character work and stage activities."
+            data-mr="सादरीकरण तंत्र, व्यक्तिरेखा आणि स्टेजवरील उपक्रमांसह थिएटर आणि अभिनयाचे प्रगत प्रात्यक्षिक प्रशिक्षण.">
+
             Advanced practical training in theatre and acting, including
             performance techniques, character work and stage activities.
+
         </p>
 
 
-        <h3 data-en="Voice and Speech Training"
+        <h3
+            data-en="Voice and Speech Training"
             data-mr="आवाज आणि भाषण प्रशिक्षण">
+
             Voice and Speech Training
+
         </h3>
 
-        <p data-en="Training focused on voice modulation, pronunciation, speech clarity, dialogue delivery and effective communication."
-           data-mr="आवाजातील चढ-उतार, उच्चार, भाषणातील स्पष्टता, संवाद सादरीकरण आणि प्रभावी संवाद कौशल्यावर केंद्रित प्रशिक्षण.">
+
+        <p
+            data-en="Training focused on voice modulation, pronunciation, speech clarity, dialogue delivery and effective communication."
+            data-mr="आवाजातील चढ-उतार, उच्चार, भाषणातील स्पष्टता, संवाद सादरीकरण आणि प्रभावी संवाद कौशल्यावर केंद्रित प्रशिक्षण.">
+
             Training focused on voice modulation, pronunciation, speech
             clarity, dialogue delivery and effective communication.
+
         </p>
 
+
     </section>
+
 
 
     <!-- ================= ABHIVYAKTI GALLERY ================= -->
 
     <section class="gallery-section">
 
-        <h2 class="gallery-title"
+
+        <h2
+            class="gallery-title"
             data-en="Abhivyakti Gallery"
             data-mr="अभिव्यक्ती गॅलरी">
+
             Abhivyakti Gallery
+
         </h2>
 
 
         <div class="gallery-grid">
 
-            <div class="gallery-item">
-                <img src="gallery/abhi1.png"
-                     alt="Abhivyakti Theatre Performance">
-            </div>
 
             <div class="gallery-item">
-                <img src="gallery/abhi2.png"
-                     alt="Abhivyakti Acting Performance">
+
+                <img
+                    src="gallery/abhi1.png"
+                    alt="Abhivyakti Theatre Performance">
+
             </div>
 
-            <div class="gallery-item">
-                <img src="gallery/abhi3.png"
-                     alt="Abhivyakti Theatre Training">
-            </div>
 
             <div class="gallery-item">
-                <img src="gallery/abhi4.png"
-                     alt="Abhivyakti Stage Performance">
+
+                <img
+                    src="gallery/abhi2.png"
+                    alt="Abhivyakti Acting Performance">
+
             </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="gallery/abhi3.png"
+                    alt="Abhivyakti Theatre Training">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="gallery/abhi4.png"
+                    alt="Abhivyakti Stage Performance">
+
+            </div>
+
 
         </div>
 
+
     </section>
 
 
-    <!-- Brochure - LAST -->
+
+    <!-- ================= LAST BROCHURE PAGE ================= -->
 
     <section class="content-section brochure-section">
 
-        <h2 data-en="Abhivyakti Brochure"
+
+        <h2
+            data-en="Abhivyakti Brochure"
             data-mr="अभिव्यक्ती ब्रोशर">
+
             Abhivyakti Brochure
+
         </h2>
 
-        <p data-en="Explore the complete details of the Abhivyakti School of Film & Theatre. The brochure provides information about the courses, training and program details. Download the brochure to know more about Abhivyakti."
-           data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटरची संपूर्ण माहिती जाणून घ्या. ब्रोशरमध्ये कोर्स, प्रशिक्षण आणि कार्यक्रमाची माहिती दिली आहे. अभिव्यक्तीबद्दल अधिक जाणून घेण्यासाठी ब्रोशर डाउनलोड करा.">
+
+        <p
+            data-en="Explore the complete details of the Abhivyakti School of Film & Theatre. The brochure provides information about the courses, training and program details. Download the brochure to know more about Abhivyakti."
+            data-mr="अभिव्यक्ती स्कूल ऑफ फिल्म अँड थिएटरची संपूर्ण माहिती जाणून घ्या. ब्रोशरमध्ये कोर्स, प्रशिक्षण आणि कार्यक्रमाची माहिती दिली आहे. अभिव्यक्तीबद्दल अधिक जाणून घेण्यासाठी ब्रोशर डाउनलोड करा.">
+
             Explore the complete details of the Abhivyakti School of Film & Theatre.
             The brochure provides information about the courses, training and program details.
             Download the brochure to know more about Abhivyakti.
+
         </p>
 
-        <a href="abhivyakti-brochure.pdf"
-           download
-           class="brochure-btn"
-           data-en="Download Brochure"
-           data-mr="ब्रोशर डाउनलोड करा">
+
+        <a
+            href="abhivyakti-brochure.pdf"
+            download
+            class="brochure-btn"
+            data-en="Download Brochure"
+            data-mr="ब्रोशर डाउनलोड करा">
+
             Download Brochure
+
         </a>
 
+
     </section>
+
 
 </main>
 
 
+
+<!-- ================= SOCIAL BAR ================= -->
+
 <div class="social-bar">
 
-    <a href="https://www.facebook.com/" target="_blank" class="facebook-icon">
+
+    <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        class="facebook-icon">
+
         <svg viewBox="0 0 24 24">
-            <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1z"/>
+
+            <path
+                d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1z"/>
+
         </svg>
+
     </a>
 
 
-    <a href="https://www.instagram.com/tri_performing_arts/" target="_blank" class="instagram-icon">
+
+    <a
+        href="https://www.instagram.com/tri_performing_arts/"
+        target="_blank"
+        class="instagram-icon">
+
         <svg viewBox="0 0 24 24">
-            <rect x="3" y="3" width="18" height="18" rx="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="1"/>
+
+            <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="5"/>
+
+            <circle
+                cx="12"
+                cy="12"
+                r="4"/>
+
+            <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"/>
+
         </svg>
+
     </a>
 
 
-    <a href="https://www.youtube.com/" target="_blank" class="youtube-icon">
+
+    <a
+        href="https://www.youtube.com/"
+        target="_blank"
+        class="youtube-icon">
+
         <svg viewBox="0 0 24 24">
-            <rect x="2" y="5" width="20" height="14" rx="4"/>
-            <polygon points="10,8 17,12 10,16"/>
+
+            <rect
+                x="2"
+                y="5"
+                width="20"
+                height="14"
+                rx="4"/>
+
+            <polygon
+                points="10,8 17,12 10,16"/>
+
         </svg>
+
     </a>
 
 
-    <a href="https://wa.me/919890654588?text=Hello%2C%20I%20am%20interested%20in%20TRI%20School%20of%20Performing%20Arts."
-       target="_blank"
-       class="whatsapp-icon">
+
+    <a
+        href="https://wa.me/919890654588?text=Hello%2C%20I%20am%20interested%20in%20TRI%20School%20of%20Performing%20Arts."
+        target="_blank"
+        class="whatsapp-icon">
 
         <svg viewBox="0 0 32 32">
 
-            <path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.8 6.4L3 29l6.8-1.8C11.7 28.4 13.8 29 16 29c7.2 0 13-5.8 13-13S23.2 3 16 3z"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="2"/>
+            <path
+                d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.8 6.4L3 29l6.8-1.8C11.7 28.4 13.8 29 16 29c7.2 0 13-5.8 13-13S23.2 3 16 3z"
+                fill="none"
+                stroke="white"
+                stroke-width="2"/>
 
-            <path d="M11.5 9.8c-.4 0-.8.2-1 .6-.3.5-.8 1.6-.8 2.4 0 1.3.9 3.1 2.3 4.7 1.4 1.7 3.4 3.1 5.3 3.7.7.2 1.4.1 1.9-.2.5-.3 1.2-1 1.4-1.5.2-.5.2-.9.1-1.1-.1-.2-.4-.3-.8-.5l-1.7-.8c-.3-.1-.6-.2-.8.2l-.7.9c-.2.3-.4.3-.7.2-.4-.2-1.5-.6-2.3-1.4-.9-.8-1.5-1.8-1.7-2.2-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.7-1.7c-.2-.5-.5-.7-.8-.7z"
-                  fill="white"/>
+
+            <path
+                d="M11.5 9.8c-.4 0-.8.2-1 .6-.3.5-.8 1.6-.8 2.4 0 1.3.9 3.1 2.3 4.7 1.4 1.7 3.4 3.1 5.3 3.7.7.2 1.4.1 1.9-.2.5-.3 1.2-1 1.4-1.5.2-.5.2-.9.1-1.1-.1-.2-.4-.3-.8-.5l-1.7-.8c-.3-.1-.6-.2-.8.2l-.7.9c-.2.3-.4.3-.7.2-.4-.2-1.5-.6-2.3-1.4-.9-.8-1.5-1.8-1.7-2.2-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-.7-1.7c-.2-.5-.5-.7-.8-.7z"
+                fill="white"/>
 
         </svg>
+
     </a>
 
 
-    <a href="#"
-       class="ai-agent-button"
-       onclick="openAIChat(); return false;"
-       title="TRI Assistant">
+
+    <a
+        href="#"
+        class="ai-agent-button"
+        onclick="openAIChat(); return false;"
+        title="TRI Assistant">
+
         TRI Assistant
+
     </a>
+
 
 </div>
 
 
+
+<!-- ================= SCRIPTS ================= -->
+
 <script src="script.js"></script>
-<script type="module" src="firebase.js"></script>
-<script type="module" src="ai.js"></script>
+
+<script
+    type="module"
+    src="firebase.js">
+</script>
+
+<script
+    type="module"
+    src="ai.js">
+</script>
 
 
-<div id="aiChatBox" class="ai-chat-box">
+
+<!-- ================= AI CHAT ================= -->
+
+<div
+    id="aiChatBox"
+    class="ai-chat-box">
+
 
     <div class="ai-chat-header">
 
-        <span>TRI Assistant</span>
+        <span>
+            TRI Assistant
+        </span>
 
-        <button onclick="closeAIChat()">×</button>
+
+        <button
+            onclick="closeAIChat()">
+
+            ×
+
+        </button>
 
     </div>
 
 
-    <div id="aiChatMessages" class="ai-chat-messages">
+
+    <div
+        id="aiChatMessages"
+        class="ai-chat-messages">
 
         <div class="ai-message">
+
             Hi! I'm TRI Assistant. How can I help you?
+
         </div>
 
     </div>
 
 
+
     <div class="ai-chat-input">
+
 
         <input
             type="text"
@@ -508,14 +1173,22 @@
             placeholder="Type your message..."
         >
 
-        <button onclick="sendAIMessage()">
+
+        <button
+            onclick="sendAIMessage()">
+
             Send
+
         </button>
 
+
     </div>
+
 
 </div>
 
 
+
 </body>
+
 </html>
